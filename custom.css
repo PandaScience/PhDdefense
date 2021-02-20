@@ -1,0 +1,375 @@
+@import "plugin/title-footer/title-footer.css";
+
+/* NOTE: need to set :revealjs_center: false in header !! */
+
+
+/* https://stackoverflow.com/questions/18716077/crop-video-in-html  */
+
+/* WORKS (y) */
+
+body {
+  /* background: #c4e4ec; */
+  /* background: #FFFFFF; */
+  /* background: -moz-radial-gradient(center, circle cover, #f7fbfc 0%, #add9e4 100%); */
+  /* background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, #f7fbfc), color-stop(100%, #add9e4)); */
+  /* background: -webkit-radial-gradient(center, circle cover, #f7fbfc 0%, #add9e4 100%); */
+  /* background: -o-radial-gradient(center, circle cover, #f7fbfc 0%, #add9e4 100%); */
+  /* background: -ms-radial-gradient(center, circle cover, #f7fbfc 0%, #add9e4 100%); */
+  /* background: radial-gradient(center, circle cover, #f7fbfc 0%, #add9e4 100%); */
+  /* background-color: #f7fbfc; */
+}
+
+/* decrease font size and change text color globally */
+:root {
+	/* --custom-color: #ECF5FD; */
+	/* --custom-color: #FDF4EC; */
+	/* --custom-color: #00000; */
+	--custom-color: #aebed6;
+}
+.reveal {
+  color: var(--custom-color);
+}
+.reveal .slides section:not(.title) {
+	font-size: 36px;
+}
+.reveal .slides img {
+	border-color: var(--custom-color);
+}
+.reveal .slides .imageblock.manim img {
+	border: none;
+}
+.reveal .slides h2 {
+	color: var(--custom-color);
+}
+
+.MathJax, .MathJax_Display {
+	font-size: 95% !important;
+}
+
+
+/* add ITP logo to all slides */
+.reveal .slides {
+	background-image: url("pics/logo_itp.png"),
+					  url("pics/logo_tubaf.png");
+	/* background-image: url("pics/Logo_itp_blau_eng.png"), */
+	/* 				  url("pics/Logo_TUBAF/Logo_original/TUBAF_Logo_orig_RGB.png"); */
+
+	background-repeat: no-repeat, no-repeat;
+	background-size: 7%, 4.5%;
+	background-position: right top, left top;
+	z-index: 1;
+	/* background-image: url("pics/Logo_TUBAF/Logo_weiss/TUBAF_Logo_weiss.png"); */
+	/* background-repeat: no-repeat; */
+	/* background-size: 7%; */
+	/* background-position: right top; */
+}
+
+/* left-align all text */
+/* .reveal .slides section:not(.title,.centered-slide) { */
+/* 	text-align: left; */
+/* } */
+
+.slides .left {
+	text-align: left;
+}
+
+.slides .left-align{
+	display: inline-block;
+	text-align: left;
+}
+
+.slides .no-margin * {
+	margin: 0;
+}
+
+/* hide footer on title slide */
+.title #title-footer
+{
+	opacity: 0;
+	transition: opacity 800ms ease-in-out;
+}
+
+/* TODO not sure what this is for... */
+.title .slide-background-content {
+	margin-top: 1em;
+}
+
+/* adjust some font sizes on title page */
+.reveal section.title #subtitle {
+	font-size: xx-large;
+}
+
+.reveal section.title h1 {
+	margin-top: 8%;
+	font-size: 30pt;
+	text-transform: none;
+}
+
+.reveal section.title .author small {
+	font-size: xx-large;
+	margin-top: 11em;
+	font-weight: bold;
+}
+
+
+#titlepage-footer {
+	position: absolute;
+	/* bottom: 0; */
+	margin-top: 25%;
+	left: 0;
+	right: 0;
+	font-size: 0.6em;
+	/* font-weight: bold; */
+}
+
+/* change font on title slide to mono space */
+.reveal .title * {
+	font-family: Inconsolata;
+	/* font-family: "DejaVu Sans Mono"; */
+	/* font-family: Noto Sans; */
+}
+
+/* make slide headings smaller and center */
+.reveal .slides h2 {
+	/* margin-left: 30px; */
+	/* margin-left: 100px; */
+	/* text-align: left; */
+	text-align: center;
+	/* font-size: larger; */
+	/* font-size: 150%; */
+	font-size: 120%;
+	position: relative;
+	top: -22px;
+}
+
+/* change background for testing */
+.reveal .slides {
+	/* default bf color */
+	/* background-color: rgba(76, 175, 80, 0.1); */
+
+	/* background-color: rgba(200, 175, 200, 0.5); */
+	/* background-color: #fdf5ed; */
+}
+
+/* abuse ul for indented block text */
+/* W3C is you friend; see https://stackoverflow.com/a/17828274 */
+.reveal .arrow ul {
+	list-style-type: "⇒ ";
+}
+/* .reveal .arrow ul { */
+/* 	display: block; */
+/* 	list-style-type: none; */
+/* 	text-align: left; */
+/* } */
+/* .reveal .arrow li:before { */
+/* 	content: "⇒"; */
+/* 	margin-right: 15px; */
+/* 	float: left; */
+/* } */
+
+
+/* phantom spacing */
+.reveal .phantom {
+	visibility: hidden;
+}
+
+/* allow wrap in column slides */
+.reveal .slides .columns .slide-content {
+	flex-flow: wrap;
+}
+
+/* spacing and font size in description lists as used in outline */
+.reveal div.dlist {
+	margin-bottom: 0.5em;
+}
+.reveal div.dlist li {
+	font-size: smaller;
+}
+
+.reveal section#_outline dl li {
+	color: lightgrey;
+	color: rgba(255, 255, 255, 0.6)
+}
+
+/* .reveal section#_outline div:is(.current-fragment) dl * { */
+/* 	color: white; */
+/* } */
+
+.reveal section#_outline .fragment {
+	transition: all 1.5s ease;
+}
+
+
+
+
+/* adapt slide height for references at bottom */
+.reveal .slides section {
+	/* border: 1px solid white; */
+	height: 96%;
+}
+.refs {
+	/* border: 1px solid #ccc; */
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	color: rgb(52, 151, 161);
+	font-size: medium;
+	text-align: left;
+}
+.refs p {
+	margin: 0;
+}
+
+
+/* TODO bugreport. fix broken horizontal item list*/
+.slides td.hdlist1, .slides td.hdlist2 {
+	vertical-align: baseline;
+	border: none;
+}
+
+.reveal .hdlist table {
+	border-collapse: collapse;
+}
+.reveal .hdlist table td {
+	padding: 0em 0.5em;
+}
+.reveal .hdlist table td p {
+	margin: 0;
+}
+
+
+
+
+/* modify tags */
+.reveal .slides blockquote {
+	background-color: #7eaa967a;
+	border-radius: 15px;
+}
+
+
+.videoblock.as-background {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	margin: auto;
+	margin-top: 5%;
+	z-index: -1;
+}
+
+
+/* text roles */
+.reveal .slides .red {
+	/* color: #ff2c2d; */
+	color: #d27476;
+}
+.reveal .slides .orange {
+	/* color: #ff2c2d; */
+	color: #ecb321;
+}
+.reveal .slides .green,
+.reveal .slides section .fragment.highlight-green.visible
+{
+	/* color: #17ff2e; */
+	color: #57c8ab;
+	font-weight: normal;
+	font-style: normal;
+}
+.reveal .slides .blue {
+	/* color: #1b91ff; */
+	color: #66a9e8;
+}
+.reveal .slides .purple {
+	color: #b079c1;
+}
+.reveal .slides .smaller {
+	font-size: 0.7em;
+	/* font-size: smaller; */
+	/* display: block; */
+}
+
+.reveal .slides .scale95 {
+	font-size: 95%;
+}
+.reveal .slides .scale90 {
+	font-size: 90%;
+}
+.reveal .slides .scale80 {
+	font-size: 80%;
+}
+.reveal .slides .scale70 {
+	font-size: 70%;
+}
+
+.reveal .slides .boxed {
+	border: 4px solid;
+	border-color: #b079c1;
+}
+
+
+
+
+#title-footer a {
+	/* color: #527cb2d4; */
+	color: #42affab3;
+}
+
+/* slide-specific settings */
+#Proper1.columns .slide-content > .column:not(:first-child) {
+	padding-bottom: 0.2em;
+}
+#Proper1 .MathJax_Display {
+	margin: 0.6em;
+}
+
+#Proper1 .MathJax_Display {
+	margin: 0.6em;
+}
+
+#Proper2.columns .slide-content > .column {
+	padding: 0em;
+}
+
+#Proper2 .MathJax {
+	font-size: 90% !important;
+}
+
+#Kubo2.columns .slide-content > .column {
+	padding: 0em;
+}
+
+
+/* DEBUGGING  */
+.reveal .slides video {
+	/* border: 1px solid; */
+}
+
+
+/* TESTING  */
+
+
+/* section[data-fragment="2"] p { */
+/*   font-family: 'Baloo Bhai', cursive; */
+/* } */
+/*  */
+/* section[data-fragment="3"] p { */
+/*   color: black; */
+/*   flex: 1; */
+/*   font-size: 2em; */
+/*   line-height: 1.2; */
+/*   text-decoration: none; */
+/*   background-image: linear-gradient(to right, yellow 0, yellow 100%); */
+/*   background-position: 0 -0.1em; */
+/*   background-size: 100% 100%; */
+/*   background-repeat: no-repeat; */
+/*   transition: background .5s; */
+/* } */
+
+
+
+
+
+
+
+/* EOF */

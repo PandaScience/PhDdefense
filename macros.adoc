@@ -1,0 +1,77 @@
+// ------------------------------ mathjax macros
+// ------------------------------\e
+[stem]
+++++
+\newcommand{\h}{\hspace{.1em}}
+\newcommand{\hh}{\hspace{.05em}}
+
+\newcommand{\hll}[1]{{\Large\color{LimeGreen}{\textbf{#1}}}}
+\newcommand{\hl}[1]{\color{LimeGreen}{\boldsymbol{#1}}}
+
+\newcommand{\tns}[1]{{\Tiny #1}}
+\newcommand{\T}{{\small \text{T}}}
+
+\renewcommand{\i}{{\mathrm{i}}}
+\newcommand{\e}{{\mathrm{e}}}
+\newcommand{\m}{{\mathrm{m}}}
+
+\newcommand{\del}{\partial}
+\newcommand{\de}{\tn{d}}
+
+\newcommand{\vc}[1]{\boldsymbol{#1}}
+\newcommand{\E}{\vc{E}}
+\newcommand{\B}{\vc{B}}
+\newcommand{\D}{\vc{D}}
+\newcommand{\H}{\vc{H}}
+\newcommand{\P}{\vc{P}}
+\newcommand{\M}{\vc{M}}
+\newcommand{\A}{\vc{A}}
+\newcommand{\vcx}{\vc{x}}
+\newcommand{\vck}{\vc{k}}
+\newcommand{\vcq}{\vc{q}}
+\newcommand{\vcj}{\vc{j}}
+\newcommand{\vcp}{\vc{p}}
+
+\newcommand{\tn}[1]{\text{#1}}
+\newcommand{\eps}{\varepsilon}
+
+\newcommand{\tot}{\tn{tot}}
+\newcommand{\ind}{\tn{ind}}
+\newcommand{\ext}{\tn{ext}}
+
+\newcommand{\cext}{\color{LimeGreen}{\textbf{ext}}}
+\newcommand{\cind}{\color{LimeGreen}{\textbf{ind}}}
+\newcommand{\ctot}{\color{LimeGreen}{\textbf{tot}}}
+
+
+\newcommand{\pmat}[1]{\begin{pmatrix} #1 \end{pmatrix}}
+\newcommand{\ten}[3]{{#1^#2}_{\!#3}}
+\newcommand{\chimn}{\ten{\chi}{\mu}{\nu}}
+
+\newcommand{\tsr}[1]{\overset{\scriptsize\leftrightarrow}{#1}}
+\newcommand{\ttsr}[1]{\overset{\scriptsize\leftrightarrow}{\widetilde{#1}}}
+
+\newcommand{\identity}{\tsr{\mathbb{1}}}
+\newcommand{\PL}{\tsr{P}_\L}
+\newcommand{\PT}{\tsr{P}_\T}
+\newcommand{\RT}{\tsr{R}_\T}
+\newcommand{\ESG}{\tsr{\mathbb{E}}}
+
+\newcommand{\EE}{{\Tiny\textbf{EE}}}
+\newcommand{\EB}{{\Tiny\textbf{EB}}}
+\newcommand{\BE}{{\Tiny\textbf{BE}}}
+\newcommand{\BB}{{\Tiny\textbf{BB}}}
+\newcommand{\AB}{{\Tiny\textbf{AB}}}
+
+\newcommand{\bra}[1]{\langle #1|}
+\newcommand{\ket}[1]{|#1 \rangle}
+\newcommand{\braket}[2]{\langle #1 | #2 \rangle}
+\newcommand{\vcjh}{\,\,\hat{\!\!\h\vcj}}
+\newcommand{\psih}{\hat\psi}
+\newcommand{\Ham}{\hat{\mathcal{H}}}
+
+\newcommand{\eqdef}{\; \overset{\tn{def}}{=} \;}
+
+\newcommand{\idk}{\int \de^3 \vck \;}
+\newcommand{\idkpi}{\int \frac{\de^3\vck }{(2\pi)^3} \;}
+++++
