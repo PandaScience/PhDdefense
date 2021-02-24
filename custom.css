@@ -1,4 +1,5 @@
 @import "plugin/title-footer/title-footer.css";
+@import "plugin/verticator/verticator.css";
 
 /* NOTE: need to set :revealjs_center: false in header !! */
 
@@ -6,18 +7,6 @@
 /* https://stackoverflow.com/questions/18716077/crop-video-in-html  */
 
 /* WORKS (y) */
-
-body {
-  /* background: #c4e4ec; */
-  /* background: #FFFFFF; */
-  /* background: -moz-radial-gradient(center, circle cover, #f7fbfc 0%, #add9e4 100%); */
-  /* background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, #f7fbfc), color-stop(100%, #add9e4)); */
-  /* background: -webkit-radial-gradient(center, circle cover, #f7fbfc 0%, #add9e4 100%); */
-  /* background: -o-radial-gradient(center, circle cover, #f7fbfc 0%, #add9e4 100%); */
-  /* background: -ms-radial-gradient(center, circle cover, #f7fbfc 0%, #add9e4 100%); */
-  /* background: radial-gradient(center, circle cover, #f7fbfc 0%, #add9e4 100%); */
-  /* background-color: #f7fbfc; */
-}
 
 /* decrease font size and change text color globally */
 :root {
@@ -42,27 +31,45 @@ body {
 	color: var(--custom-color);
 }
 
-.MathJax, .MathJax_Display {
-	font-size: 95% !important;
-}
+/* !!! this is done in convert bash script via MathJax.Hub.Config() settings  */
+/* .MathJax, .MathJax_Display { */
+/* 	font-size: 95% !important; */
+/* } */
 
 
 /* add ITP logo to all slides */
 .reveal .slides {
 	background-image: url("pics/logo_itp.png"),
 					  url("pics/logo_tubaf.png");
-	/* background-image: url("pics/Logo_itp_blau_eng.png"), */
-	/* 				  url("pics/Logo_TUBAF/Logo_original/TUBAF_Logo_orig_RGB.png"); */
-
 	background-repeat: no-repeat, no-repeat;
 	background-size: 7%, 4.5%;
 	background-position: right top, left top;
-	z-index: 1;
-	/* background-image: url("pics/Logo_TUBAF/Logo_weiss/TUBAF_Logo_weiss.png"); */
-	/* background-repeat: no-repeat; */
-	/* background-size: 7%; */
-	/* background-position: right top; */
 }
+
+/* add logo to printer output */
+.pdf-page {
+	background-image: url("pics/logo_itp.png"),
+					  url("pics/logo_tubaf.png");
+	background-repeat: no-repeat, no-repeat;
+	background-size: 7%, 4.5%;
+	background-position: right top, left top;
+	/* content: url("pics/logo_itp.png"); */
+	/* position: absolute; */
+	/* top: 0; */
+	/* right: 0; */
+	/* transform: scale(0.25); */
+	/* transform-origin: top right; */
+}
+
+/* .slides::after { */
+/* 	content: url("pics/logo_itp.png"); */
+/* 	position: absolute; */
+/* 	top: 0; */
+/* 	right: 0; */
+/* 	transform: scale(0.25); */
+/* 	transform-origin: top right; */
+/* } */
+
 
 /* left-align all text */
 /* .reveal .slides section:not(.title,.centered-slide) { */
@@ -71,6 +78,12 @@ body {
 
 .slides .left {
 	text-align: left;
+}
+.slides .right {
+	text-align: right;
+}
+.slides .center {
+	text-align: center;
 }
 
 .slides .left-align{
@@ -89,9 +102,10 @@ body {
 	transition: opacity 800ms ease-in-out;
 }
 
-/* TODO not sure what this is for... */
-.title .slide-background-content {
-	margin-top: 1em;
+/* move video on title page away from logos when in print-mode */
+.pdf-page .title .slide-background-content {
+	margin-top: 2em;
+	/* border: 1px solid; */
 }
 
 /* adjust some font sizes on title page */
@@ -177,6 +191,13 @@ body {
 .reveal .slides .columns .slide-content {
 	flex-flow: wrap;
 }
+.reveal .slides .columns .slide-content .column > .content {
+	padding-bottom: 0;
+}
+/* NOTE: this does not work when number of first-line columns is variable */
+/* .reveal .slides .columns .slide-content .column:not(:first-child) > .content { */
+/* 	padding-top: 0; */
+/* } */
 
 /* spacing and font size in description lists as used in outline */
 .reveal div.dlist {
@@ -196,7 +217,7 @@ body {
 /* } */
 
 .reveal section#_outline .fragment {
-	transition: all 1.5s ease;
+	transition: all 1s ease;
 }
 
 
@@ -218,6 +239,10 @@ body {
 }
 .refs p {
 	margin: 0;
+}
+
+#_outline .refs {
+	text-align: center;
 }
 
 
@@ -268,13 +293,14 @@ body {
 	/* color: #ff2c2d; */
 	color: #ecb321;
 }
-.reveal .slides .green,
-.reveal .slides section .fragment.highlight-green.visible
+/* .reveal .slides section .fragment.highlight-green.visible */
+.reveal .slides .green
 {
+	/* font-weight: bold; */
+	/* font-style: normal; */
 	/* color: #17ff2e; */
-	color: #57c8ab;
-	font-weight: normal;
-	font-style: normal;
+	/* color: #57c8ab; */
+	color: #8DC73E;
 }
 .reveal .slides .blue {
 	/* color: #1b91ff; */
@@ -283,6 +309,9 @@ body {
 .reveal .slides .purple {
 	color: #b079c1;
 }
+
+
+
 .reveal .slides .smaller {
 	font-size: 0.7em;
 	/* font-size: smaller; */
@@ -302,6 +331,20 @@ body {
 	font-size: 70%;
 }
 
+/* NOTE: changing font size this way works prefectly with SVG renderer! */
+.reveal .slides .stemscale90 .MathJax_SVG {
+	font-size: 90% !important;
+}
+.reveal .slides .stemscale85 .MathJax_SVG {
+	font-size: 85% !important;
+}
+.reveal .slides .stemscale50 .MathJax_SVG {
+	font-size: 50% !important;
+}
+/* .reveal .slides .stemscale90 .stemblock .content { */
+/* 	font-size: 90%; */
+/* } */
+
 .reveal .slides .boxed {
 	border: 4px solid;
 	border-color: #b079c1;
@@ -309,35 +352,105 @@ body {
 
 
 
-
+#title-footer {
+	/* increase space when time elapsed bar is used */
+	padding-bottom: 0.5% !important;
+}
 #title-footer a {
 	/* color: #527cb2d4; */
 	color: #42affab3;
 }
 
-/* slide-specific settings */
-#Proper1.columns .slide-content > .column:not(:first-child) {
-	padding-bottom: 0.2em;
+
+/* title page images */
+#img-coil {
+	position: absolute;
+	width: 500px;
+	top: 10%;
+	right: 20%;
 }
-#Proper1 .MathJax_Display {
-	margin: 0.6em;
+#img-qfield {
+	position: absolute;
+	width: 550px;
+	top: 35%;
+	right: 2%;
+}
+#img-magnet {
+	position: absolute;
+	width: 450px;
+	top: 58%;
+	right: 30%;
 }
 
-#Proper1 .MathJax_Display {
-	margin: 0.6em;
+.reveal .slides .h2span {
+	background: #191919;
 }
 
-#Proper2.columns .slide-content > .column {
-	padding: 0em;
+#FA h2, #QFT h2 {
+	font-size: 120%;
+	text-transform: none;
+	padding: 20px;
+	padding-top: 8%;
+	border-bottom: 5px solid;
+	width: 50%;
+	margin: 0;
+	display: inline-block;
 }
 
-#Proper2 .MathJax {
-	font-size: 90% !important;
+#QFT h2 {
+	padding-top: 12%;
 }
 
-#Kubo2.columns .slide-content > .column {
-	padding: 0em;
+#FA .imageblock, #QFT .imageblock {
+	/* top: 40%; */
 }
+
+/* four vector x and k definitions on sl. 8 */
+#xkfour {
+	position: absolute;
+	top: 10%;
+	right: 0;
+}
+
+	/* transition: 800ms ease-in-out; */
+	/* -webkit-transition: 3s; */
+	/* -moz-transition: 3s; */
+#Kubo1 #Kubo1-lcol {
+	margin-left: 25%;
+}
+#Kubo1[data-fragment="1"] #Kubo1-lcol
+{
+	-webkit-transform: translateX(-50%);
+		transform: translateX(-50%);
+	transition: transform 3s ease;
+}
+
+
+#Kubo1[data-fragment="-1"] #Kubo1-lcol,
+#Kubo1[data-fragment="0"] #Kubo1-lcol {
+	margin-left: 25%;
+	transition: 2s ease-in-out;
+	-webkit-transition: 2s;
+	-moz-transition: 2s;
+}
+
+#Kubo1[data-fragment="1"] #Kubo1-lcol {
+	margin-left: 0;
+	transition: 2s ease-in-out;
+	-webkit-transition: 2s;
+	-moz-transition: 2s;
+}
+
+
+
+
+#commutator {
+	font-size: 80%;
+	position: absolute;
+	right: 5%;
+	top:45%;
+}
+
 
 
 /* DEBUGGING  */
