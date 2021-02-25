@@ -390,7 +390,7 @@ td.hdlist1 {
 }
 </style><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/v4-shims.min.css"><script type="text/x-mathjax-config">MathJax.Hub.Config({
 CommonHTML: { scale: 95 },
-SVG: { scale: 95, mtextFontInherit: true},
+SVG: { scale: 95 },
 tex2jax: {
   inlineMath: [["\\(", "\\)"]],
   displayMath: [["\\[", "\\]"]],
@@ -411,34 +411,47 @@ document.getElementsByTagName( 'head' )[0].appendChild( link );</script><link re
 <section id="_outline" class="columns"><h2>Outline</h2><div class="slide-content"><div class="exampleblock column is-two-fifths left"><div class="content"><div class="dlist"><dl><dt class="hdlist1">Motivation</dt></dl></div>
 <div class="openblock fragment" data-fragment-index="2"><div class="content"><div class="dlist"><dl><dt class="hdlist1">Functional Approach to ED in Media</dt><dd><div class="ulist"><ul><li><p>Source Splitting &#160; &amp; &#160; Field Identifications</p></li><li><p>Fundamental Response Tensor &#160; &amp; &#160; URR</p></li></ul></div></dd></dl></div></div></div>
 <div class="openblock fragment" data-fragment-index="3"><div class="content"><div class="dlist"><dl><dt class="hdlist1">Quantum Field Theory</dt><dd><div class="ulist"><ul><li><p>Kubo-Greenwood Formalism</p></li><li><p>Full Current Operator</p></li></ul></div></dd></dl></div></div></div>
-<div class="openblock fragment" data-fragment-index="4"><div class="content"><div class="dlist"><dl><dt class="hdlist1">Impact on Materials Models</dt><dd><div class="ulist"><ul><li><p>Cov. Wave Equation &#160; &amp; &#160; London Model</p></li><li><p>Optical &amp; Magnetic Properties of FEG</p></li></ul></div></dd></dl></div></div></div>
-<div class="dlist" data-fragment-index="5"><dl><dt class="hdlist1">Summary &amp; Conclusion</dt></dl></div></div></div>
-<div class="exampleblock column is-three-fifths right"><div class="content"><div id="img-coil" class="imageblock fragment" data-fragment-index="2"><a class="image" href="https://www.pexels.com/photo/blue-metal-tool-2635595/"><img src="pics/coil.jpg" alt="coil"></a></div>
-<div id="img-qfield" class="imageblock fragment" data-fragment-index="3"><a class="image" href="https://www.pexels.com/photo/brown-framed-light-bulb-745708/"><img src="pics/qfield.png" alt="qfield"></a></div>
-<div id="img-magnet" class="imageblock fragment" data-fragment-index="4"><a class="image" href="https://commons.wikimedia.org/wiki/File:Magnet_4.jpg"><img src="pics/magnet.jpg" alt="magnet"></a></div></div></div>
+<div class="openblock fragment" data-fragment-index="4"><div class="content"><div class="dlist"><dl><dt class="hdlist1">Impact on Materials Models</dt><dd><div class="ulist"><ul><li><p>Wave Equation &#160; &amp; &#160; London Model</p></li><li><p>Optical &amp; Magnetic Properties of FEG</p></li></ul></div></dd></dl></div></div></div>
+<div class="dlist fragment"><dl><dt class="hdlist1">Summary &amp; Conclusion</dt></dl></div></div></div>
+<div class="exampleblock column is-three-fifths right"><div class="content"><div id="img-coil" class="imageblock fragment" data-fragment-index="2"><img src="pics/coil.jpg" alt="coil"></div>
+<div id="img-qfield" class="imageblock fragment" data-fragment-index="3"><img src="pics/qfield.png" alt="qfield"></div>
+<div id="img-magnet" class="imageblock fragment" data-fragment-index="4"><img src="pics/magnet.jpg" alt="magnet"></div></div></div>
 <div class="openblock refs"><div class="content"><div class="paragraph"><p><a href="https://www.pexels.com/photo/blue-metal-tool-2635595/">coil:</a> Killian Eon
-via Pexels  / <a href="https://creativecommons.org/publicdomain/zero/1.0/">CC0</a> &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160;
+via Pexels  / <a href="https://creativecommons.org/publicdomain/zero/1.0/">CC0</a>
+&#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160;
+<a href="https://commons.wikimedia.org/wiki/File:Quantum_Fluctuations.gif">quantum field:</a>
+Ahmed Neutron via via Wikimedia Commons
+<a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a>
+&#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160;
 <a href="https://commons.wikimedia.org/wiki/File:Magnet_4.jpg">magnet</a>:
 Peter nussbaumer via Wikimedia Commons
 <a href="http://creativecommons.org/licenses/by-sa/3.0/">CC BY-SA 3.0</a></p></div></div></div>
-<div class="stemblock"><div class="content">\[% example color definition
+<div class="stemblock"><div class="content">\[\newcommand{\bold}{\boldsymbol}
+
+% example color definition
 \definecolor{revealbgc}{RGB}{25, 25, 25}
 \definecolor{revealtc}{RGB}{174, 190, 214}
+
 % required for fcolorbox to work...
-\definecolor{green}{RGB}{141, 199, 62}
+% \definecolor{green}{RGB}{141, 199, 62}
+
 % but can also use CSS classes!
 % --&gt; adds CSS class ".green" in HTML code
 % --&gt; consistent coloring!
 \newcommand{\green}[1]{\class{green}{#1}}
+\newcommand{\blue}[1]{\class{blue}{#1}}
 \newcommand{\purple}[1]{\class{purple}{#1}}
+\newcommand{\orange}[1]{\class{orange}{#1}}
+\newcommand{\red}[1]{\class{red}{#1}}
 
 % \newcommand{\gbox}[1]{\fcolorbox{green}{revealbgc}{#1}}
-\newcommand{\gbox}[1]{\color{green}{\boxed{\color{revealtc}{#1}}}}
+\newcommand{\gbox}[1]{\green{\boxed{\color{revealtc}{#1}}}}
+\newcommand{\obox}[1]{\orange{\boxed{\color{revealtc}{#1}}}}
 
 \newcommand{\h}{\hspace{.1em}}
 \newcommand{\hh}{\hspace{.05em}}
 
-\newcommand{\hll}[1]{{\Large\green{\textbf{#1}}}}
+\newcommand{\hll}[1]{{\Large\green{\boldsymbol{#1}}}}
 \newcommand{\hl}[1]{\green{\boldsymbol{#1}}}
 
 \newcommand{\ppt}{\;\propto\;\;}
@@ -490,6 +503,7 @@ Peter nussbaumer via Wikimedia Commons
 \newcommand{\pmat}[1]{\begin{pmatrix} #1 \end{pmatrix}}
 \newcommand{\ten}[3]{{#1^#2}_{\!#3}}
 \newcommand{\chimn}{\ten{\chi}{\mu}{\nu}}
+\newcommand{\chimnt}{\ten{\widetilde\chi}{\mu}{\nu}}
 
 \newcommand{\tsr}[1]{\overset{\scriptsize\leftrightarrow}{#1}}
 \newcommand{\ttsr}[1]{\overset{\scriptsize\leftrightarrow}{\widetilde{#1}}}
@@ -516,69 +530,55 @@ Peter nussbaumer via Wikimedia Commons
 \newcommand{\eqdef}{\; \overset{\tn{def}}{=} \;}
 
 \newcommand{\idk}{\int \de^3 \vck \;}
-\newcommand{\idkpi}{\int \frac{\de^3\vck }{(2\pi)^3} \;}\]</div></div></div></section>
-<section id="_motivation" class="columns"><h2>Motivation</h2><div class="slide-content"><div class="openblock column is-two-third"><div class="content"><div class="paragraph"><p>Description of optical &amp; magnetic materials<br>
-properties based on fundamental theories</p></div>
-<div class="ulist step"><ul><li class="fragment"><p>Classical Electrodynamics<br>
-<span class="smaller fragment fade-in-then-semi-out">
-e.g. optical spectroscopy &#8594; irradiation of light = (external) EM fields</span></p></li><li class="fragment"><p>Linear Response Theory<br>
-<span class="smaller fragment fade-in-then-semi-out">
-&#8594; interaction of material w/ external <strong>EM fields</strong> as response functions</span></p></li><li class="fragment"><p>Quantum Mechanics (Quantum Field Theory)<br>
-<span class="smaller fragment fade-in-then-semi-out">
-&#8594; many body problem, "observables" via expectation values
-\(\langle \psi | \hat{O} | \psi\rangle\)</span></p></li></ul></div>
-<div class="exampleblock fragment"><div class="content"><hr>
-<div class="hdlist"><table><tr><td class="hdlist1"><span class="blue"><strong>Q:</strong></span></td><td class="hdlist2"><p>How to access EM bulk properties from QM ?</p></td></tr><tr><td class="hdlist1"><span class="blue"><strong>A:</strong></span></td><td class="hdlist2"><p>Naïvely not possible !<br></p></td></tr></table></div></div></div>
-<div class="ulist step arrow"><ul><li class="fragment"><p>Need <span class="orange">Kubo Formalism</span> for response<br>
-tensors defined by e.g. &#160;
-\(\chi_{ij}^{\Tiny\tn{EE}} = \frac{\delta E_\mathrm{ind}^i}{\delta E_\mathrm{ext}^j}\)</p></li></ul></div></div></div>
-<div class="openblock column is-vcentered"><div class="content"><div class="imageblock fragment" data-fragment-index="3"><img src="pics/capacitor.png" alt="capacitor" width="50%"></div>
-<div class="paragraph boxed fragment"><p>⤫ &#160; <span class="blue"><strong>Thesis:</strong></span> Already quite demanding for FEG &#160; ⤫</p></div></div></div></div></section>
-<section><section id="FA"><h2><span class="h2span">Functional Approach to <br> Electrodynamics in Media</span></h2><div class="slide-content"><div class="imageblock"><a class="image" href="https://www.pexels.com/photo/brown-framed-light-bulb-745708/"><img src="pics/bulb.jpg" alt="bulb" width="40%"></a></div><div class="openblock refs"><div class="content"><div class="paragraph"><p>img: <a href="https://www.pexels.com/photo/brown-framed-light-bulb-745708/">Skitterphoto</a>
-via Pexels / <a href="https://creativecommons.org/publicdomain/zero/1.0/">CC0</a></p></div></div></div></div></section><section id="Source1" class="manim-video"><h2>Source Splitting &amp; Field Identifications (1)</h2><div class="slide-content"><div class="videoblock"><video src="video_slides/MaxwellEqs.mp4" width="100%" height="100%">Your browser does not support the video tag.</video></div>
-<p class="fragment" type='video' time_start=0 time_end=3.249999999999999></p>
-<p class="fragment" type='video' time_start=3.249999999999999 time_end=4.749999999999996></p>
-<p class="fragment" type='video' time_start=4.749999999999996 time_end=6.249999999999992></p>
-<p class="fragment" type='video' time_start=6.249999999999992 time_end=8.749999999999986></p>
-<p class="fragment" type='video' time_start=8.749999999999986 time_end=9.999999999999982></p></div></section><section id="Source2" class="manim-video"><h2>Source Splitting &amp; Field Identifications (2)</h2><div class="slide-content"><div class="videoblock"><video src="video_slides/MaxwellEqs2.mp4" width="100%" height="100%">Your browser does not support the video tag.</video></div>
-<p class="fragment" type='video' time_start=0 time_end=1.25></p>
-<p class="fragment" type='video' time_start=1.25 time_end=3.749999999999996></p>
-<p class="fragment" type='video' time_start=3.749999999999996 time_end=5.249999999999993></p>
-<p class="fragment" type='video' time_start=5.249999999999993 time_end=9.749999999999986></p>
-<p class="fragment" type='video' time_start=9.749999999999986 time_end=16.24999999999997></p>
-<p class="fragment" type='video' time_start=16.24999999999997 time_end=19.50000000000007></p></div></section><section id="Source3"><h2>Source Splitting &amp; Field Identifications (3)</h2><div class="slide-content"><div class="paragraph"><p>Source splitting carries over to EM fields&#8230;&#8203;</p></div>
-<div class="paragraph"><p>\(
-\begin{align}
-\rho_\tot &amp;= \rho_\ind + \rho_\ext \\
-\vcj_\tot &amp;= \vcj_\ind + \vcj_\ext
-\end{align}
-\quad \Rightarrow \quad
-\)
-\(
-\begin{align}
-\E_\tot &amp;= \E_\ind + \E_\ext \\
-\B_\tot &amp;= \B_\ind + \B_\ext
-\end{align}
-\)</p></div>
+\newcommand{\idkpi}{\int \frac{\de^3\vck }{(2\pi)^3} \;}
+
+\newcommand{\fermi}{\tn{F}}
+\renewcommand{\Re}{{\small\operatorname{Re}\h}}
+\renewcommand{\Im}{{\small\operatorname{Im}\h}}
+
+\newcommand{\abs}[1]{|#1|}
+\newcommand{\rchi}{\chi_{nn}}
+
+\newcommand{\vint}[1]{\int \frac{\de^3 #1 }{(2\pi)^3} \,}
+\newcommand{\plus}{^\boldsymbol{\tns +}}
+
+
+\newcommand{\ido}[3]{ \int_{#2}^{#3} \de #1 }
+\DeclareMathOperator{\Ln}{Ln}\]</div></div></div></section>
+<section id="Motivation" class="columns"><h2>Motivation</h2><div class="slide-content"><div class="exampleblock column is-three-fifths left-align"><div class="content"><div class="quoteblock wide"><blockquote><div class="paragraph"><p><span class="green">Goal:</span>
+Description of optical &amp; magnetic response<br>
+properties based on <span class="orange">microscopic field theories</span></p></div></blockquote></div>
 <div class="paragraph"><p><p style="margin-bottom:0.50em; display:flex"></p></p></div>
-<div class="openblock fragment"><div class="content"><div class="paragraph"><p>&#8230;&#8203;and corresponding potentials</p></div>
-<div class="stemblock"><div class="content">\[\begin{alignat}{2}
-\A_\tot &amp;= \A_\ind + \A_\ext \qquad &amp;&amp; \qquad
-\E = -\nabla \varphi -\del_t \A \\
-\varphi_\tot &amp;= \varphi_\ind + \varphi_\ext &amp;&amp; \qquad
-\B = \nabla \times \A
-\end{alignat}\]</div></div></div></div>
-<div class="paragraph"><p><p style="margin-bottom:0.50em; display:flex"></p></p></div>
-<div class="openblock fragment"><div class="content"><div class="paragraph"><p>Convert to traditional naming scheme via fundamental field identifications</p></div>
-<div class="stemblock"><div class="content">\[\begin{alignat}{2}
-\P &amp;= -\eps_0 \E_\ind \qquad &amp;&amp; \qquad
-\M  = \mu_0^{-1} \B_\ind \\
-\D &amp;= +\eps_0 \E_\ext &amp;&amp; \qquad
-\H  = \mu_0^{-1} \B_\ext \\
-\E &amp;= \E_\tot &amp;&amp; \qquad
-\B  = \B_\tot
-\end{alignat}\]</div></div></div></div>
-<div class="quoteblock"><blockquote><div class="paragraph"><p>Thesis is based on a purely <span class="purple">microscopic description</span> of ED in media.</p></div></blockquote></div></div></section></section>
+<div class="openblock fragment" data-fragment-index="2"><div class="content"><div class="hdlist left-align"><table><tr><td class="hdlist1"><span class="green">☐</span></td><td class="hdlist2"><p>Why microscopic theories?</p><div class="ulist scale90"><ul><li><p>allows to compute materials properties <em>ab initio</em> &#160;<br>
+&#8594; fundamental insight how matter <em>really</em> works</p></li><li><p>most physical effects are of genuine microscopic nature</p></li></ul></div></td></tr></table></div></div></div>
+<hr>
+<div class="openblock fragment" data-fragment-index="3"><div class="content"><div class="hdlist left-align"><table><tr><td class="hdlist1"><span class="green">☐</span></td><td class="hdlist2"><p>Possible applications?</p><div class="ulist scale90"><ul><li><p>basically everything related to EM fields in media</p></li><li><p>optical spectroscopy (e.g. refractive index measurements)</p></li><li><p>materials modelling (meta materials, invisibility cloaks, &#8230;&#8203;)</p></li></ul></div></td></tr></table></div></div></div></div></div>
+<div class="exampleblock column is-two-fifths scale90"><div class="content"><div class="openblock fragment" data-fragment-index="1"><div class="content"><div class="paragraph"><p>which field theories?</p></div>
+<hr>
+<div class="paragraph"><p>Classical Electrodynamics<br>
+Linear Response Theory<br>
+Quantum Field Theory</p></div></div></div>
+<div class="imageblock fragment" data-fragment-index="3"><img src="pics/crystal.jpg" alt="crystal" width="70%"></div>
+<div class="openblock fragment" data-fragment-index="4"><div class="content"><div class="hdlist qa-fragment"><table><tr><td class="hdlist1"><span class="blue"><strong>Q:</strong></span></td><td class="hdlist2"><p>How combine theories and access EM response properties from QM ?</p></td></tr><tr><td class="hdlist1"><span class="blue"><strong>A:</strong></span></td><td class="hdlist2"><p>Naïvely not possible !<br>
+Hang on if you want to find out&#8230;&#8203;</p></td></tr></table></div></div></div>
+<div class="openblock refs"><div class="content"><div class="paragraph"><p><a href="https://www.pexels.com/photo/cold-glass-ice-luxury-3725723/">img:</a> Castorly Stock
+via Pexels / <a href="https://creativecommons.org/publicdomain/zero/1.0/">CC0</a></p></div></div></div></div></div></div></section>
+<section><section id="FA"><h2><span class="h2span">Functional Approach to <br> Electrodynamics in Media</span></h2><div class="slide-content"><div class="imageblock"><img src="pics/bulb.jpg" alt="bulb" width="40%"></div><div class="openblock refs"><div class="content"><div class="paragraph"><p>img: <a href="https://www.pexels.com/photo/brown-framed-light-bulb-745708/">Skitterphoto</a>
+via Pexels / <a href="https://creativecommons.org/publicdomain/zero/1.0/">CC0</a></p></div></div></div></div></section><section id="_source_splitting_field_identifications" class="manim-video"><h2>Source Splitting &amp; Field Identifications</h2><div class="slide-content"><div class="videoblock"><video src="video_slides/MaxwellEqs2.mp4" width="100%" height="100%">Your browser does not support the video tag.</video></div>
+<p class="fragment" style="display: none;" type='video' time_start=0 time_end=3.249999999999999></p>
+<p class="fragment" style="display: none;" type='video' time_start=3.249999999999999 time_end=4.749999999999996></p>
+<p class="fragment" style="display: none;" type='video' time_start=4.749999999999996 time_end=6.249999999999992></p>
+<p class="fragment" style="display: none;" type='video' time_start=6.249999999999992 time_end=9.249999999999986></p>
+<p class="fragment" style="display: none;" type='video' time_start=9.249999999999986 time_end=10.749999999999982></p>
+<p class="fragment" style="display: none;" type='video' time_start=10.749999999999982 time_end=12.249999999999979></p>
+<p class="fragment" style="display: none;" type='video' time_start=12.249999999999979 time_end=13.749999999999975></p>
+<p class="fragment" style="display: none;" type='video' time_start=13.749999999999975 time_end=15.249999999999972></p>
+<p class="fragment" style="display: none;" type='video' time_start=15.249999999999972 time_end=17.750000000000043></p>
+<p class="fragment" style="display: none;" type='video' time_start=17.750000000000043 time_end=19.250000000000092></p>
+<p class="fragment" style="display: none;" type='video' time_start=19.250000000000092 time_end=23.75000000000029></p>
+<p class="fragment" style="display: none;" type='video' time_start=23.75000000000029 time_end=25.25000000000034></p>
+<p class="fragment" style="display: none;" type='video' time_start=25.25000000000034 time_end=26.75000000000039></p>
+<p class="fragment" style="display: none;" type='video' time_start=26.75000000000039 time_end=28.00000000000044></p></div></section></section>
 <section><section id="_fundamental_response_tensor_1" class="columns stemscale90"><h2>Fundamental Response Tensor (1)</h2><div class="slide-content"><div class="exampleblock column is-full"><div class="content"><div class="quoteblock"><div class="title">Basis of (linear) &#160; <span class="orange">Response Theory</span>:</div><blockquote><div class="paragraph"><p>Induced fields can be regarded as <span class="purple">functionals</span> of external ones.</p></div></blockquote></div>
 <div class="paragraph"><p><p style="margin-bottom:0.50em; display:flex"></p></p></div>
 <div class="hdlist qa-fragment"><table><tr><td class="hdlist1"><span class="blue"><strong>Q:</strong></span></td><td class="hdlist2"><p>Which functional is the "correct" one?
@@ -586,19 +586,22 @@ via Pexels / <a href="https://creativecommons.org/publicdomain/zero/1.0/">CC0</a
 \(\E_\ind [\E_\ext, \B_\ext], \quad \vcj_\ind[\E_\ext], \quad
 \B_\ind[\rho_\ext, \vcj_\ext], \; \ldots \; ?\)
 <p style="margin-bottom:0.50em; display:flex"></p></p></td></tr><tr><td class="hdlist1"><span class="blue"><strong>A:</strong></span></td><td class="hdlist2"><p>Postulate of <span class="orange">Functional Approach</span>:
-\(\;\; j^\mu_\ind = j^\mu_\ind[A^\nu_\ext]\)</p></td></tr></table></div></div></div><div class="paragraph column is-one-quater"><p></p></div><div class="paragraph column is-one-quater fragment"><p>Linear approximation:
-\(\boxed{ \quad \chimn(x, x') =
-\dfrac{\delta j^\mu_\ind(x)}{\delta A^\nu_\ext(x')} \quad}\)</p></div><div class="openblock column is-one-quater fragment"><div class="content"><div class="paragraph"><p>Lorentz 4-vector notation:
+\(\;\; j^\mu_\ind = j^\mu_\ind[A^\nu_\ext]\)</p></td></tr></table></div></div></div><div class="paragraph column is-one-quater"><p></p></div><div class="openblock column is-one-quater fragment"><div class="content"><div class="paragraph"><p>Lorentz 4-vector notation:
 <p style="margin-bottom:0.25em; display:flex"></p>
 <span class="scale90">\(
-\quad A^\mu = \pmat{\varphi / c  \\ \A} \,,
+\quad x^\mu = \pmat{ct \\ \vcx} \,,
 \quad j^\mu = \pmat{c \rho \\ \vcj} \,,
-\quad x^\mu = \pmat{ct \\ \vcx}
-\)</span></p></div></div></div><div class="paragraph column is-one-quater"><p></p></div><div class="quoteblock column is-full fragment"><blockquote><div class="paragraph"><p>2<sup>nd</sup> order tensor &#160; \(\chimn\) &#160; contains
+\quad A^\mu = \pmat{\varphi / c  \\ \A}
+\)</span></p></div></div></div><div id="Aphi" class="stemblock fragment"><div class="content">\[\begin{align}
+\E &amp;= - \nabla \varphi - \del_t \A \\[1ex]
+\B &amp;= \nabla \times \A
+\end{align}\]</div></div><div class="openblock column is-one-quater fragment"><div class="content"><div class="paragraph"><p>Linear response tensor:
+\(\quad\quad\gbox{ \quad \chimn(x, x') =
+\dfrac{\delta j^\mu_\ind(x)}{\delta A^\nu_\ext(x')} \quad}\)</p></div></div></div><div class="paragraph column is-one-quater"><p></p></div><div class="quoteblock column is-full fragment"><blockquote><div class="paragraph"><p>2<sup>nd</sup> order tensor &#160; \(\chimn\) &#160; contains
 <span class="purple">complete information</span> on EM response.</p></div></blockquote></div></div></section><section id="_fundamental_response_tensor_2"><h2>Fundamental Response Tensor (2)</h2><div class="slide-content"><div class="paragraph"><p>Continuity equation and gauge invariance imply the constraints:</p></div>
 <div class="stemblock"><div class="content">\[\del_\mu \chimn(x, x') = \del^{'\nu} \chimn(x, x') = 0\]</div></div>
 <div class="quoteblock"><blockquote><div class="paragraph"><p>&#8658; &#160; at most <span class="purple">9 independent</span> linear response functions!</p></div></blockquote></div>
-<div id="xkfour" class="stemblock scale80"><div class="content">\[\begin{align}
+<div id="xkfour" class="stemblock"><div class="content">\[\begin{align}
 \quad x^\mu    &amp;= \pmat{ct \\ \vcx} \\[1.5ex]
 \quad \del^\mu &amp;= \pmat{ -\del_t \\ \nabla} \\[1.5ex]
 \quad k^\mu    &amp;= \pmat{ \omega/c \\ \vck}
@@ -620,7 +623,7 @@ via Pexels / <a href="https://creativecommons.org/publicdomain/zero/1.0/">CC0</a
 \dfrac{\delta\vcj_\ind}{\delta\A_\ext} \;}
 \)</p></td></tr></table></div></div>
 <div class="quoteblock fragment"><blockquote><div class="paragraph"><p>Remaining components form the 3x3 &#160; <span class="orange">Current Response Tensor</span>
-&#160; \(\tsr\chi(\vck,\omega)\).</p></div></blockquote></div></div></section><section id="_universal_response_relations" class="columns"><h2>Universal Response Relations</h2><div class="slide-content"><div class="openblock column is-half"><div class="content"><div class="quoteblock fragment"><blockquote><div class="paragraph"><p><span class="green"><strong>Central Claim:</strong></span><br>
+&#160; \(\tsr\chi(\vck,\omega)\).</p></div></blockquote></div></div></section><section id="UUR" class="columns"><h2>Universal Response Relations</h2><div class="slide-content"><div id="UUR-lcol" class="openblock column is-half"><div class="content"><div class="quoteblock fragment"><blockquote><div class="paragraph"><p><span class="green"><strong>Central Claim:</strong></span><br>
 Current response tensor \(\tsr\chi\)<br>
 determines all linear EM<br>
 materials properties.</p></div></blockquote></div>
@@ -628,146 +631,137 @@ materials properties.</p></div></blockquote></div>
 <div class="paragraph fragment"><p><span class="orange">basic relation</span>: &#160;
 \(\tsr\chi(\vck, \omega) = \i\omega \h \tsr\sigma(\vck,\omega)\)</p></div>
 <div class="paragraph"><p><p style="margin-bottom:0.50em; display:flex"></p></p></div>
-<div class="stemblock fragment"><div class="content">\[\begin{align}
+<div class="stemblock fragment"><div class="content">\[\gbox{
+\begin{align}
 \tsr\chi_\EE = \dfrac{\de \E_\ind}{\de \E_\ext} \,,\quad
 \tsr\chi_\EB = \dfrac{\de \E_\ind}{\de \B_\ext} \\[2ex]
 \tsr\chi_\BE = \dfrac{\de \B_\ind}{\de \E_\ext} \,,\quad
 \tsr\chi_\BB = \dfrac{\de \B_\ind}{\de \B_\ext}
-\end{align}\]</div></div>
+\end{align}}\]</div></div>
 <div class="paragraph"><p><p style="margin-bottom:0.50em; display:flex"></p></p></div>
-<div class="paragraph fragment"><p>&#8658; all expressable in terms of &#160; \(\tsr\chi\) &#160; or &#160;<br>
+<div class="paragraph fragment"><p>&#8658; can all be in terms of &#160; \(\tsr\chi\) &#160; or &#160;<br>
 alternatively in terms of conductivity &#160; \(\tsr\sigma\) &#160; !</p></div></div></div>
 <div class="openblock column is-half"><div class="content"><div class="paragraph fragment"><p>Combined with the power of<br>
 <span class="orange">Total Functional Derivatives</span> yields<br>
 <span class="orange">Universal Response Relations (URR)</span></p></div>
 <div class="ulist step left"><ul><li class="fragment"><p><span class="purple">model and material-independent</span> relations<br>
 between EM response functions</p></li><li class="fragment"><p>already include all effects of anisotropy<br>
-and ME cross-coupling</p></li><li class="fragment"><p><span class="purple">all standard relations</span> known in electronic<br>
-structure <span class="purple">recovered</span> in suitable limiting cases<br>
-e.g. optical limit &#8594;
-\(\tsr\eps_\tn{\!r}(\omega) = 1 -\dfrac{\ttsr\sigma(\omega)}{\i\omega} \)</p></li><li class="fragment"><p>conductivity routinely calculated <em>ab initio</em> <br>
+and ME cross-coupling</p></li><li class="fragment"><p><span class="purple">all standard relations</span> known in ab initio<br>
+theory <span class="purple">recovered</span> in suitable limiting cases<br>
+e.g. optical limit &#160; &#8594; &#160;
+\(\tsr\eps_\tn{\!r}(\omega) = 1 -\dfrac{\ttsr\sigma(\omega)}{\i\omega \h\eps_0} \)</p></li><li class="fragment"><p>conductivity routinely calculated <em>ab initio</em> <br>
 ↝ <span class="orange">URR</span> as post-processing<br>
 ↝ see also &#160; <span class="icon"><i class="fa fa-github"></i></span>
 <a href="https://github.com/PandaScience/ElkOpticsAnalyzer">Elk Optics Analyzer</a></p></li></ul></div></div></div></div></section></section>
-<section><section id="QFT"><h2>Quantum Field Theory</h2><div class="slide-content"><div class="imageblock"><a class="image" href="https://www.pexels.com/photo/blue-metal-tool-2635595/"><img src="pics/coil.jpg" alt="coil" width="40%"></a></div><div class="openblock refs"><div class="content"><div class="paragraph"><p>coil: Killian Eon via Pexels  /
-<a href="https://creativecommons.org/publicdomain/zero/1.0/">CC0</a> &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160;</p></div></div></div></div></section><section id="Kubo1" class="columns"><h2>Kubo-Greenwood Formalism (1)</h2><div class="slide-content"><div class="hdlist column is-full qa-fragment left"><table><tr><td class="hdlist1"><span class="blue"><strong>Q:</strong></span></td><td class="hdlist2"><p>How to calculate response functions from <em>ab initio</em>?</p></td></tr><tr><td class="hdlist1"><span class="blue"><strong>A:</strong></span></td><td class="hdlist2"><p>Use <span class="orange">Kubo Formula</span> in spectral representation.</p></td></tr></table></div>
-<div id="Kubo1-lcol" class="openblock column is-half"><div class="content"><div class="paragraph"><p>Given a (weak) time-dependent <span class="purple">perturbation</span> \(X(t)\)
-that couples to an operator \(\hat{O}_1\) in the Hamiltonian</p></div>
+<section><section id="QFT"><h2>Quantum Field Theory</h2><div class="slide-content"><div class="imageblock"><img src="pics/rashba.png" alt="rashba" width="40%"></div><div class="openblock refs"><div class="content"><div class="paragraph"><p>img: Giulio Schober / with permission</p></div></div></div></div></section><section id="Kubo1" class="columns"><h2>Kubo-Greenwood Formalism (1)</h2><div class="slide-content"><div class="openblock column is-full"><div class="content"><div class="hdlist qa-fragment"><table><tr><td class="hdlist1"><span class="blue"><strong>Q:</strong></span></td><td class="hdlist2"><p>How to calculate response functions <span class="purple"><em>from first principles</em></span>?</p></td></tr><tr><td class="hdlist1"><span class="blue"><strong>A:</strong></span></td><td class="hdlist2"><p>Use <span class="orange">Kubo Formalism</span>:</p></td></tr></table></div>
+<div class="stemblock fragment"><div class="content">\[\chi_\AB(t-t') \eqdef \frac{\delta A(t)}{\delta \green{P(t')}} \bigg|_{P=0}
+= -\frac{\i}{\hbar} \, \Theta(t-t') \,
+\braket{\Psi_0 | [ \purple{\hat{A}}_\mathrm{I}(t), \purple{\hat{B}}_\mathrm{I}(t') ]}{\Psi_0}\]</div></div></div></div>
+<div class="openblock column is-three-fifths fragment"><div class="content"><div class="paragraph"><p>Let <span class="green">\(P(t)\)</span> be a (weak) time-dependent <span class="green">perturbation</span><br>
+which couples to an <span class="purple">operator \(\hat{B}\)</span> in the Hamiltonian.</p></div>
+<table class="tableblock frame-none grid-none"><colgroup><col><col></colgroup><tbody><tr><td class="tableblock halign-left valign-top"><p class="tableblock"><span class="fragment">\(\Ham(t) = \Ham_0 + \green{P(t)} \h \purple{\hat{B}}\)</span></p></td><td class="tableblock halign-left valign-top"><p class="tableblock"><span class="fragment">\(\quad \Rightarrow \quad
+\i\hbar\,\del_t \h \ket{\Psi(t)} = \Ham(t) \h \ket{\Psi(t)}\)</span><br></p><p class="tableblock"><span class="fragment">\(\quad \Rightarrow \quad \ket{\Psi(t)} =
+\green{\big(\,} \ket{\Psi(t)}\green{\big) \bold{[} P \bold{]} }\)</span></p></td></tr></table></div></div>
+<div class="openblock column is-two-fifths fragment"><div class="content"><div class="paragraph"><p>Expectation value of some other <span class="purple">observable \(\hat{A}\)</span> is then
+given by</p></div>
 <div class="paragraph"><p><p style="margin-bottom:0.50em; display:flex"></p>
-\(\Ham = \Ham_0 + X(t) \h \hat{O}_1 \quad \Rightarrow
-\i\hbar\frac{\de}{\de t} \ket{\Psi(t)} = \Ham(t) \ket{\Psi(t)}\)
-<p style="margin-bottom:0.50em; display:flex"></p></p></div>
-<div class="paragraph"><p>The expectation value of an <span class="purple">observable</span> is given by
-\(A(t)[X] = \braket{\Psi(t) | \hat{O}_2}{\Psi(t)} \)</p></div>
-<div class="paragraph"><p><span class="orange">Kubo formula</span> allows to express the <span class="purple">retarted response</span> of
-the observable w.r.t. the perturbation solely in terms of unperturbed
-quantities</p></div>
-<div class="stemblock"><div class="content">\[\chi^\tns{R}_\AB(t-t') \eqdef -\frac{\i}{\hbar} \, \Theta(t-t') \,
-\braket{\Psi_0 | \hll{[} \hat{A}_\tn{I}(t), \hat{B}_\tn{I}(t') \hll{]}}{\Psi_0}\]</div></div></div></div>
-<div class="quoteblock column is-half fragment"><blockquote><div class="paragraph"><p>some text</p></div>
-<div class="paragraph frament"><p>some other text</p></div></blockquote></div></div></section><section id="_kubo_greenwood_formalism_1"><h2>Kubo-Greenwood Formalism (1)</h2><div class="slide-content"><div class="hdlist qa-fragment left"><table><tr><td class="hdlist1"><span class="blue"><strong>Q:</strong></span></td><td class="hdlist2"><p>How to calculate response functions from <em>ab initio</em>?</p></td></tr><tr><td class="hdlist1"><span class="blue"><strong>A:</strong></span></td><td class="hdlist2"><p>Use <span class="orange">Kubo Formula</span> in spectral representation.</p></td></tr></table></div>
-<div class="openblock fragment"><div class="content"><div class="paragraph"><p>Kubo Formula for <span class="purple">retarded</span> response functions,
-<span class="purple">observable</span>
-\(\hat{A}\) and <span class="purple">perturbation</span> \(\hat{B}\) &#8230;&#8203;</p></div>
-<div class="stemblock"><div class="content">\[\chi^\tns{R}_\AB(t-t') \eqdef -\frac{\i}{\hbar} \, \Theta(t-t') \,
-\braket{\Psi_0 | \hll{[} \hat{A}_\tn{I}(t), \hat{B}_\tn{I}(t') \hll{]}}{\Psi_0}\]</div></div></div></div>
-<div class="openblock fragment"><div class="content"><div class="paragraph"><p>&#8230;&#8203; with time dependence given by <span class="orange">Interaction Picture</span>
-(<span class="smaller">\(\Ham_0\)</span> &#8594; Hamiltonian w/o perturbation)</p></div>
-<div class="stemblock"><div class="content">\[\hat{A}_\tn{I}(t) =
-\e^{\i \Ham_0 t / \hbar} \h \hat{A} \h \e^{-\i \Ham_0 t / \hbar}\]</div></div></div></div>
-<div class="openblock fragment"><div class="content"><div class="paragraph"><p>For <span class="purple">non-interacting</span> systems, wavefunctions
-can be chosen as Slater determinants</p></div>
-<div class="paragraph"><p>\( \ket{\Psi^N} = \ket{\tn{SL}(\varphi_1, \ldots, \varphi_N)} \)
-<span class="step fragment">\( \quad \Rightarrow \quad \Ham {}^N = \sum_N \Ham {}^1 \)</span>
-<span class="step fragment">\( \quad \Rightarrow \quad \Ham {}^1 \ket{\varphi_i} = \epsilon_i
-\ket{\varphi_i} \)</span></p></div></div></div>
-<div class="paragraph"><p><p style="margin-bottom:0.50em; display:flex"></p></p></div>
-<div class="quoteblock fragment"><blockquote><div class="paragraph"><p>FEG convenient b/c allows to work with <span class="purple">single-particle equations</span>.</p></div></blockquote></div></div></section><section id="Kubo2" class="columns"><h2>Kubo-Greenwood Formalism (2)</h2><div class="slide-content"><div class="openblock column is-full fragment"><div class="content"><div class="paragraph no-margin"><p>In Fourier space and <span class="orange">Thermodynamic Limit</span>, Kubo formula reverts to
-spectral representation</p></div>
-<div class="paragraph"><p>\(
-\chi_\AB^\tns{R}(\omega) = \sum\limits_{i,j=0}^\infty
-\dfrac{ \Big( f_{\beta,\mu}(\epsilon_i) - f_{\beta,\mu}(\epsilon_j) \Big) \h
+\(A(t)\green{ \bold{[} P \bold{]} } = \braket{\Psi(t) |\, \hat{A} \,}{\Psi(t)} \)</p></div>
+<div class="paragraph"><p><p style="margin-bottom:0.50em; display:flex"></p>
+<span class="fragment wboxed">note: &#160; \(\ket{\Psi}\) is a many-body state!</span></p></div></div></div>
+<div class="quoteblock column is-full fragment"><blockquote><div class="paragraph"><p>Kubo formula allows to express the <span class="purple">response \(\chi\)</span> of the
+observable w.r.t.<br>
+the perturbation <span class="orange"><strong>solely</strong> in terms of unperturbed quantities</span></p></div></blockquote></div>
+<aside class="notes"><div class="paragraph"><p>remove table margin</p></div></aside></div></section><section id="Kubo2" class="columns stemscale90"><h2>Kubo-Greenwood Formalism (2)</h2><div class="slide-content"><div class="openblock column is-two-fifths fragment"><div class="content"><div class="paragraph no-margin left"><p>For <span class="purple">non-interacting</span> systems, WF can be chosen as Slater determinant</p></div>
+<div class="paragraph"><p>\( \ket{\Psi^N} = \ket{\tn{SL}(\blue{\varphi_1}, \ldots, \blue{\varphi_N})} \)</p></div>
+<div class="paragraph"><p><p style="margin-bottom:0.33em; display:flex"></p></p></div>
+<div class="paragraph fragment left"><p>Many-body problem decomposes into effective <span class="purple">single-particle system</span></p></div>
+<div class="paragraph"><p><span class="fragment">\( \Ham {}^N = \sum_N \Ham {}^1 \,, \quad\)</span>
+<span class="fragment">\( \Ham {}^1 \ket{\blue{\varphi_i}} = \epsilon_i \ket{\blue{\varphi_i}} \)</span></p></div></div></div>
+<div class="openblock column is-three-fifths fragment"><div class="content"><div class="paragraph no-margin"><p>In <span class="orange">Grand Canonical Ensemble</span>, Kubo formula reverts<br>
+to its <span class="orange">Spectral Representation</span> in Fourier space</p></div>
+<div class="paragraph fragment"><p>\(
+\chi_\AB^\tns{R}(\omega) = \sum\limits_{i,j=0}^\infty \dfrac{ \Big(
+\green{f_{\beta,\mu}}(\epsilon_i) - \green{f_{\beta,\mu}}(\epsilon_j) \Big) \h
 A_{ij} \h B_{ji} }{\hbar(\omega + \i\eta) - (\epsilon_j - \epsilon_i)}
 \qquad
 \)</p></div>
-<div class="paragraph"><p><p style="margin-bottom:0.50em; display:flex"></p></p></div>
-<div class="paragraph"><p>where
-\(
-\qquad A_{ij} = \braket{\varphi_i | \hat{A}}{\varphi_j} \qquad
-\)
-and \(
-\qquad f_{\beta,\mu}(\epsilon_i) = \dfrac{1}{1+ \e^{\beta(\epsilon_i -\mu)}}
-\)
-<p style="margin-bottom:0.50em; display:flex"></p></p></div>
-<hr></div></div>
+<div class="paragraph"><p><p style="margin-bottom:0.33em; display:flex"></p></p></div>
+<div class="paragraph"><p><span class="fragment">\( A_{ij} = \braket{\blue{\varphi_i} | \hat{A}}{\blue{\varphi_j}} \,, \qquad \)</span>
+<span class="fragment">\(
+\green{f_{\beta,\mu}}(\epsilon_i) = \dfrac{1}{1+ \e^{\beta(\epsilon_i -\mu)}} \)</span></p></div></div></div>
+<div class="openblock column is-full fragment"><div class="content"><hr></div></div>
 <div class="openblock column is-two-fifths left fragment"><div class="content"><div class="paragraph no-margin"><p>In plane waves basis &#8230;&#8203;</p></div>
 <div class="paragraph"><p>\(
-\quad \varphi_\vck(\vcx) = \braket{\vcx}{\vck} =
-\dfrac{1}{(2\pi)^{3/2}} \, \e^{\i \vck \cdot \vcx} \quad
+\quad \blue{\varphi_\vck}(\vcx) = \braket{\vcx}{\vck} =
+\dfrac{1}{(2\pi)^{3/2}} \h\, \e^{\i \vck \cdot \vcx} \quad
 \)</p></div>
 <div class="exampleblock fragment"><div class="content"><div class="paragraph"><p>&#8230;&#8203; and for <span class="purple">density response</span></p></div>
 <div class="paragraph"><p>\(
 \quad
 \begin{align}
 \hat{A} \mapsto \hat\rho(\vcx) &amp;= (-e) \h \hat\psi {}^\dagger(\vcx) \h \hat\psi(\vcx) \\
-\hat{B} \mapsto \hat\rho(\vcx) &amp;= (-e) \h \hat\psi {}^\dagger(\vcx') \h \hat\psi(\vcx')
+\hat{B} \mapsto \hat\rho(\vcx') &amp;= (-e) \h \hat\psi {}^\dagger(\vcx') \h \hat\psi(\vcx')
 \end{align}
-\)</p></div></div></div></div></div>
-<div class="openblock column is-three-fifths fragment"><div class="content"><div class="paragraph no-margin"><p>Kubo formula yields
-&#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160;
-<span class="smaller">\(
-\varepsilon_\vck = \frac{\hbar^2 |\vck|^2}{2m} \,,\quad f_\vck = f(\epsilon_\vck)
-\)</span></p></div>
-<div class="stemblock"><div class="content">\[\chi_\rho(\vcq,\omega) = 2 \h e^2 \idkpi
-\dfrac{f_\vck - f_{\vck+\vcq}}{\hbar(\omega + \i\eta) +
+\)</p></div>
+<div class="paragraph"><p><span id="SFop">\( \hat{\psi}(\vcx) \h \ket{\varphi} \\= \braket{\vcx}{\varphi} \ket{0} \)</span></p></div></div></div></div></div>
+<div class="openblock column is-three-fifths fragment"><div class="content"><div class="paragraph no-margin"><p>Kubo formula yields in <span class="orange">Thermodynamic Limit</span></p></div>
+<div class="paragraph"><p><span id="ek-fermi">\( \epsilon_\vck = \hbar \omega_\vck \)</span></p></div>
+<div class="stemblock"><div class="content">\[\chi_{\rho\rho}(\vcq,\omega) = 2 \h e^2 \idkpi
+\dfrac{f(\epsilon_\vck) - f(\epsilon_{\vck+\vcq})}{\hbar(\omega + \i\eta) +
 \epsilon_\vck - \epsilon_{\vck+\vcq}}\]</div></div>
 <div class="quoteblock fragment"><blockquote><div class="paragraph"><p>&#8658; &#160; famous <span class="orange">Lindhard density response</span></p></div></blockquote></div></div></div></div></section></section>
-<section><section id="FullOp1"><h2>Full current operator (1)</h2><div class="slide-content"><div class="quoteblock"><blockquote><div class="paragraph"><p>For <span class="purple">current response</span> we need \(\vcjh\) instead of
-\(\hat\rho\) from QFT.</p></div></blockquote></div><div class="olist arabic"><ol class="arabic"><li class="fragment"><p>Start with free Hamiltonian</p><div class="paragraph"><p>\(
-\i\hbar \h\del_t \psi(\vcx,t) = \Ham \h \psi(\vcx,t) \,,\quad
-\Ham = \dfrac{|\hat\vcp|^2}{2m}
-\quad \Rightarrow \quad \vcj = \dfrac{(-e)\hbar}{2m\i}
-\Big(\psi^* (\nabla \psi) - (\nabla \psi)^* \psi \Big)
-\)</p></div></li><li class="fragment"><p>Extend with U(1) gauge transformation &#160;&#8594;&#160; minimal-coupling</p></li></ol></div><div class="paragraph fragment"><p>\(
-\left. \begin{align}
-\del_t &amp;\mapsto \del_t - \frac{\i}{\hbar} \, e \varphi \\
-\nabla &amp;\mapsto \nabla + \frac{\i}{\hbar} \, e \A \\
-\end{align} \;\; \right\}
-\quad \Rightarrow \quad \vcj =
-\underbrace{
+<section><section id="FullOp1" class="columns"><h2>Full current operator (1)</h2><div class="slide-content"><div class="exampleblock column"><div class="content"><div class="quoteblock"><blockquote><div class="paragraph"><p>For <span class="purple">current response tensor</span> &#160; \(\tsr\chi \equiv \tsr\chi_{\vcj\vcj}\)
+&#160; we need &#160; \(\vcjh\) &#160; instead of &#160; \(\hat\rho\) &#160;.</p></div></blockquote></div>
+<div class="olist arabic"><ol class="arabic"><li class="fragment"><p>Start with <span class="purple">free Hamiltonian</span></p><div class="paragraph"><p>\(
+\i\hbar \h\del_t \h \psi(\vcx,t) = \Ham_0 \h \psi(\vcx,t) \,,\quad
+\Ham_0 = \dfrac{|\hat\vcp|^2}{2m}\)
+<span class="fragment">\(\quad \Rightarrow \quad \boxed{ \vcj = \underbrace{
   \dfrac{(-e)\hbar}{2m\i} \Big(\psi^* (\nabla \psi) - (\nabla \psi)^* \psi \Big)
-}_{\text{orbital}} + \underbrace{\dfrac{e}{m} \, \rho \A}_{\text{diamagnetic}}
-\)</p></div><div class="paragraph"><p><p style="margin-bottom:0.50em; display:flex"></p></p></div><div class="paragraph fragment"><p>&#8658; Both satisfy the <span class="orange">Continuity Equation</span> \(\del_t \rho + \nabla \cdot \vcj = 0\)</p></div><div class="hdlist qa-fragment"><table><tr><td class="hdlist1"><span class="blue"><strong>Q:</strong></span></td><td class="hdlist2"><p>Can we find an even more general yet non-relativistic current?</p></td></tr><tr><td class="hdlist1"><span class="blue"><strong>A:</strong></span></td><td class="hdlist2"><p>Indeed. By invoking the <span class="orange">Pauli Equation</span> &#8230;&#8203;</p></td></tr></table></div></div></section><section id="FullOp2" class="columns"><h2>Full Current Operator (2)</h2><div class="slide-content"><div class="openblock column is-full"><div class="content"><div class="quoteblock"><blockquote><div class="paragraph"><p>The <span class="orange">Pauli Equation</span> is of Schrödinger-type and incorporates spin.</p></div></blockquote></div>
+}_{\mathsf{orbital}} } \)</span></p></div></li><li class="fragment"><p>Extend by U(1) gauge theory &#160;&#8594;&#160; <span class="purple">minimal-coupling</span> of EM fields</p></li></ol></div>
+<div class="paragraph"><p><span class="fragment">\(
+\begin{align}
+\del_t &amp;\mapsto \del_t - \tfrac{\i}{\hbar} \, \green{e \varphi} \\
+\nabla &amp;\mapsto \nabla + \tfrac{\i}{\hbar} \, \green{e \A} \\
+\end{align}\)</span>
+<span class="fragment">\(
+\;\; \Bigg\}
+\quad \Rightarrow \quad
+\Ham_\tn{min} = \dfrac{\left| \hat{\vcp} + \green{e\A} \right|^2}{2m} - \green{e \varphi}
+\)</span>
+<span class="fragment">\( \quad \Rightarrow \quad \boxed{ \vcj = \vcj_\orb +
+\underbrace{\dfrac{e}{m} \, \rho \A}_{\mathsf{diamagnetic}} }\)</span></p></div>
 <div class="paragraph"><p><p style="margin-bottom:0.50em; display:flex"></p></p></div>
-<div class="paragraph"><p>\(
-\Ham_\tn{Pauli} =
-\dfrac{1}{2m} \left( \vc{\sigma} \cdot (\hat{\vcp} + e\A) \right)^2 - e \varphi
-\,, \quad \qquad \vc{\sigma} = (\sigma_1, \sigma_2, \sigma_3)^\T
-\quad \;
-\)</p></div>
-<div class="paragraph"><p><br></p></div>
-<div class="paragraph fragment"><p>Leads to a total current operator of the form:
-\(
-\quad \vcjh = \vcjh_\tn{dia} +
-\underbrace{\vcjh_\tn{orb} + \vcjh_\tn{spin}}_{\tn{"paramagnetic"}}
-\)</p></div></div></div>
-<div class="openblock column is-half fragment"><div class="content"><div class="paragraph no-margin"><p>with the additional <span class="purple">spinorial contribution</span></p></div>
+<div id="QApauli" class="hdlist qa-fragment"><table><tr><td class="hdlist1"><span class="blue"><strong>Q:</strong></span></td><td class="hdlist2"><p>But what about <span class="orange">spin-induced magnetism</span>?</p></td></tr><tr><td class="hdlist1"><span class="blue"><strong>A:</strong></span></td><td class="hdlist2"><p>Commonly not considered for &#160; \(\vcj\) &#160;, but: &#160; <span class="green">Yes</span> <span class="blue">,</span> <span class="purple">we</span> <span class="orange">can!</span>&#8201;&#8212;&#8201;By invoking the
+<span class="orange">Pauli Equation</span> &#8230;&#8203;</p></td></tr></table></div></div></div></div></section><section id="FullOp2" class="columns manim-video"><h2>Full Current Operator (2)</h2><div class="slide-content"><div class="openblock column is-full"><div class="content"><div class="quoteblock"><blockquote><div class="paragraph"><p>The <span class="orange">Pauli Equation</span> is of Schrödinger-type and incorporates spin.</p></div></blockquote></div>
+<div class="videoblock fragment"><video src="video_slides/Pauli.mp4" width="100%" height="100%">Your browser does not support the video tag.</video></div>
+<p class="fragment" style="display: none;" type='video' time_start=0 time_end=5.9999999999999885></p>
+<div id="PauliMat" class="stemblock"><div class="content">\[\begin{align}
+&amp;\text{Pauli Matrices} \\[1.5ex]
+\sigma_1 &amp;= \pmat{0 &amp;   1 \\  1 &amp;  0} \\[1ex]
+\sigma_2 &amp;= \pmat{0 &amp; -\i \\ \i &amp;  0} \\[1ex]
+\sigma_3 &amp;= \pmat{1 &amp;   0 \\  0 &amp; -1}
+\end{align}\]</div></div>
+<table class="tableblock frame-none grid-none fragment"><colgroup><col><col></colgroup><tbody><tr><td class="tableblock halign-left valign-middle"><p class="tableblock">Leads to a total current <br> operator of the form:</p></td><td class="tableblock halign-left valign-top"><p class="tableblock">\( \boxed{\quad \vcjh_\tot = \vcjh_\dia + \hspace{-3em}
+\underbrace{ \vcjh_\orb + \green{\vcjh_\spin} }_{
+  \quad\qquad\mathsf{"paramagnetic"} \rightarrow \vcjh_\tn{p} = \vcjh_\tot\big|_{A=0}
+}}
+\)</p></td></tr></table></div></div>
+<div class="openblock column is-half fragment"><div class="content"><div class="paragraph no-margin"><p>with the additional <span class="green">spinorial contribution</span></p></div>
 <div class="paragraph"><p><span class="scale80">\(
 \vcjh_\tn{dia} = \dfrac{e}{m} \, \hat\rho \A \,,\qquad
 \vcjh_\tn{orb} = \dfrac{(-e)\hbar}{2m\i}
 \Big(\psih {}^\dagger (\nabla \psih) - (\nabla \psih)^\dagger \psih \Big)
 \)</span></p></div>
 <div class="paragraph"><p><span class="scale95">\(
-\boxed{
-\vcjh_\tn{spin} = \dfrac{(-e)\hbar}{2m} \, \nabla \times \left(
+\gbox{\vcjh_\tn{spin} = \dfrac{(-e)\hbar}{2m} \, \nabla \times \left(
 \sum\limits_{s,s'=\uparrow, \downarrow}
-\psih{}^\dagger_s \, \vc{\sigma}_{s's} \, \psih_{s'} \right)
+\psih{}^\dagger_s \, \vc{\sigma}_{ss'} \, \psih_{s'} \right)
 }
 \)</span></p></div></div></div>
 <div class="openblock column is-half fragment"><div class="content"><div class="quoteblock"><blockquote><div class="paragraph"><p>This is the <span class="purple">most general</span> yet<br>
 <span class="purple">non-relativistic current</span>.</p></div>
-<div class="paragraph"><p>&#8594; can also be derived from<br>
-<span class="orange">Dirac equation</span> in non-relativ. limit</p></div></blockquote></div></div></div></div></section><section id="_full_current_response_tensor" class="columns"><h2>Full Current Response Tensor</h2><div class="slide-content"><div class="openblock column is-full"><div class="content"><div class="paragraph"><p>Use <span class="orange">Generalized Kubo Formula</span> for the current response tensor</p></div>
+<div class="paragraph"><p>&#8594; can also be derived from <span class="orange">Dirac<br>
+equation</span> in non-relativistic limit</p></div></blockquote></div></div></div></div></section><section id="_full_current_response_tensor" class="columns"><h2>Full Current Response Tensor</h2><div class="slide-content"><div class="openblock column is-full"><div class="content"><div class="paragraph"><p>Use <span class="orange">Generalized Kubo Formula</span> for the current response tensor</p></div>
 <div class="stemblock"><div class="content">\[\tsr\chi(\vcx,t; \vcx',t') =
 \boxed{
 \frac{\phantom{i}\!\!e}{m} \, \rho(\vcx) \h \delta^3(\vcx-\vcx') \h \delta(t-t') \h \identity
@@ -782,8 +776,8 @@ and \(
 <div class="stemblock fragment"><div class="title">Because of bilinearity, <span class="green">commutator</span> yields <span class="purple">three contributions</span><br></div><div class="content">\[\chi = \chi^\tn{dia} + {\large\purple{(}} \chi^\tn{orb} + \chi^\tn{spin} +
 \chi^\tn{cross} {\large\purple{)}}\]</div></div></div></div>
 <div class="openblock column is-two-fifths left fragment"><div class="content"><div class="stemblock scale90"><div class="content">\[\begin{align}
-\chi^\cdia &amp;=
-\;\text{local contribution (left box above)} \\[1ex]
+\chi^\cdia &amp;\;=
+\;\mathsf{local \; contribution \; (left \, box \; above)} \\[1ex]
 %
 \chi^\corb &amp;\ppt \Big\langle [ \vcjh_\corb, \vcjh_\corb' ]\Big \rangle \\[1ex]
 %
@@ -794,15 +788,177 @@ and \(
 \end{align}\]</div></div></div></div>
 <div class="openblock column is-three-fifths fragment"><div class="content"><div class="quoteblock"><blockquote><div class="paragraph left-align"><p><span class="orange">known:</span> &#160; diamagnetic + orbital<br>
 <span class="orange">novel:</span> &#160; spin + cross-correlation</p></div></blockquote></div>
-<div class="quoteblock"><blockquote><div class="paragraph"><p><span class="purple">but:</span> &#160; cross-correlation vanishes for<br>
-<span class="orange">non-spin-polarized</span> systems like FEG</p></div></blockquote></div></div></div></div></section></section>
-<section><section id="_optical_and_magnetic_properties_from_urr"><h2>Optical and Magnetic Properties from URR</h2><div class="slide-content"><div class="ulist"><div class="title">TODO</div><ul><li><p>fundamental covariant wave eq.</p></li><li><p>simplifies only in temporal gauge to cartesian</p></li><li><p>homogeneous DEG</p></li><li><p>eps E = 0</p></li></ul></div></div></section><section id="_covariant_wave_equation"><h2>Covariant Wave Equation</h2><div class="slide-content"><div class="ulist"><div class="title">TODO</div><ul><li><p>MEQ &#8594; Wave Eq. for potentials &#8594; covariant WEQ</p></li><li><p>Follow spirit of Lin.Resp. &#8594; eliminate ind by ext/tot</p></li><li><p>Limiting cases: zero/vacuum, constant/London + Drude</p></li></ul></div></div></section><section id="_london_model"><h2>London Model</h2><div class="slide-content"><div class="quoteblock"><blockquote><div class="paragraph"><p>The <span class="orange">London Model of Superconductivity</span> is the easiest possible
+<div class="quoteblock"><blockquote><div class="paragraph"><p><span class="blue">but:</span> &#160; cross-correlation vanishes for<br>
+<span class="orange">non spin-polarized</span> systems like FEG</p></div></blockquote></div></div></div></div></section></section>
+<section id="Impact"><h2><span class="h2span">Impact on Materials Models</span></h2><div class="slide-content"><div class="imageblock"><img src="pics/magnet.jpg" alt="magnet" width="40%"></div>
+<div class="openblock refs"><div class="content"><div class="paragraph"><p><a href="https://commons.wikimedia.org/wiki/File:Magnet_4.jpg">magnet</a>:
+Peter nussbaumer via Wikimedia Commons
+<a href="http://creativecommons.org/licenses/by-sa/3.0/">CC BY-SA 3.0</a></p></div></div></div></div></section>
+<section><section id="_covariant_wave_equation_and_london_model" class="columns"><h2>Covariant Wave Equation and London model</h2><div class="slide-content"><div class="exampleblock column is-half"><div class="content"><div class="paragraph fragment"><p>Inserting &#160; <span class="scale85">\(\E= -\nabla \varphi -\del_t \A \)</span> &#160; and
+&#160; <span class="scale85">\(\B = \nabla \times \A\)</span> &#160; into the Maxwell
+equations leads to the <span class="orange">fundamental Lorentz-covariant Wave Equation</span></p></div>
+<div class="paragraph"><p><p style="margin-bottom:0.50em; display:flex"></p></p></div>
+<div class="paragraph fragment"><p>\((\eta^\mu{}_\nu\Box + \del^\mu \del_\nu) \h A^\nu_\tot
+= \mu_0 \h (\purple{\vcj_\ind} + \vcj_\ext)\)</p></div>
+<div class="paragraph"><p><p style="margin-bottom:0.50em; display:flex"></p></p></div>
+<div class="paragraph fragment"><p><span class="purple">Eliminating the induced current</span> in the spirit of response theory
+and setting &#160; \(\vcj_\ext \equiv 0\) &#160; produces</p></div>
+<div class="paragraph"><p><p style="margin-bottom:0.50em; display:flex"></p></p></div>
+<div class="paragraph fragment"><p>\((\eta^\mu{}_\nu\Box + \del^\mu \del_\nu -
+\mu_0 \h \green{\chimnt}) \h A^\nu_\tot = 0\)</p></div>
+<div class="paragraph"><p><p style="margin-bottom:0.50em; display:flex"></p></p></div>
+<div class="paragraph fragment"><p>For vanishing &#160; \(\green{\chimnt}\) &#160; the vacuum case is recovered.</p></div>
+<div class="hdlist qa-fragment"><table><tr><td class="hdlist1"><span class="blue"><strong>Q:</strong></span></td><td class="hdlist2"><p>What happens for the most simple assumption of a constant
+&#160; \(\green\chimnt\)?</p></td></tr><tr><td class="hdlist1"><span class="blue"><strong>A:</strong></span></td><td class="hdlist2"><p>We obtain the London model with purely diamagnetic current
+\(\vcj = \vcj_\dia\).</p></td></tr></table></div></div></div><div class="exampleblock column is-half"><div class="content"><div class="openblock fragment"><div class="content"><div class="quoteblock"><blockquote><div class="paragraph"><p>The <span class="orange">London Model of Superconductivity</span> is the simplest possible
 materials model from a response theoretical point of view.</p></div></blockquote></div>
-<div class="paragraph"><p>\(\vcj = -\frac{n e^2}{m} \, \A\)</p></div>
-<div class="ulist"><div class="title">TODO</div><ul><li><p>Completely isotropic, instantaneous and local current response</p></li><li><p>Can be derived w/o any knowledge from simple dimensionality analysis</p></li><li><p>Diamagnetic contribution describes perfect diamagnet</p></li><li><p>covers Meißner effect, zero electrical "DC resistance", plasma freq.</p></li><li><p>next more advanced model &#8594; Drude &#8594; relaxation time approximation</p></li><li><p>with cheating: Lorentz oszillator model also included</p></li></ul></div></div></section><section id="_spin_corrected_london_model"><h2>Spin-corrected London Model</h2><div class="slide-content"><div class="ulist"><div class="title">TODO</div><ul><li><p>replacement rule</p></li><li><p>impact on transverse dispersion relation<br>
--&#8594; neclectable term in q4-&#8594; nothing changes for optical props</p></li><li><p>"improvement" on magnetic props: Meißner effect already in w &#8594; 0 limit</p></li></ul></div></div></section></section>
-<section id="_free_electron_gas"><h2>Free Electron Gas</h2><div class="slide-content"><div class="ulist"><div class="title">TODO</div><ul><li><p>spin-orb x-corr vanishes</p></li><li><p>dimensionless formulae, reduction to 3 integrals, analytically solvable for T=0 K</p></li><li><p>Lindhard integral theorem</p></li><li><p>optical props fig 5.1 -&#8594; same as London, spin enters again with q4</p></li><li><p>inclusion magnetism via spinorial current instead of separate treatment</p></li><li><p>leads to Pauli and Landau terms</p></li></ul></div></div></section>
-<section id="_any_questions" data-state="no-title-footer"><h2>Any Questions?</h2><div class="slide-content"><div class="imageblock"><img src="pics/Miron.jpg" alt="Miron" height="600"></div></div></section></div></div><script src="reveal.js/js/reveal.js"></script><script>Array.prototype.slice.call(document.querySelectorAll('.slides section')).forEach(function(slide) {
+<div class="paragraph"><p><span class="scale90">\(\boxed{\text{London:} \quad \vcj = -\frac{ne^2}{m} \, \A}\) &#160;
+with &#160; \(\tsr\chi = \tsr\chi_\dia\)</span></p></div></div></div>
+<div id="LondonList" class="ulist step"><ul><li class="fragment"><p>completely <span class="purple">isotropic, local and instantaneous</span> (proper) response</p></li><li class="fragment"><p>covers <span class="orange">Meißner Effect</span>, zero electrical "DC resistance" and plasma
+frequency via <span class="orange">URR</span></p></li><li class="fragment"><p>highly related: <span class="orange">Drude Model</span> and with some cheating also <span class="orange">Lorentz Oscillator Model</span></p></li></ul></div>
+<div class="paragraph fragment no-margin left wboxed"><p>&#8594; Spin-correction has no considerable effect.</p></div></div></div></div></section><section id="_london_model_vs_free_electron_gas" class="columns stemscale90"><h2>London Model vs. Free Electron Gas</h2><div class="slide-content"><div class="exampleblock column is-full"><div class="content"><div class="quoteblock no-margin-top"><blockquote><div class="paragraph"><p>Based on QM, the <span class="orange">Free Electron Gas</span>
+describes free charge carriers in a solid and is surprisingly successful
+in reproducing many exp. phenomena.</p></div></blockquote></div>
+<div class="hdlist"><table><tr><td class="hdlist1"><span class="blue"><strong>Q:</strong></span></td><td class="hdlist2"><p>What changes when we replace the London Model with the
+<span class="orange">Free Electron Gas</span> and explicitly include <span class="purple">spinorial current
+contributions</span> ?</p></td></tr></table></div></div></div>
+<div class="exampleblock column is-half left fragment"><div class="content"><div class="paragraph"><p><span class="bboxed">Optical Properties:</span></p></div>
+<div class="openblock fragment"><div class="content"><div class="paragraph"><p>&#8594; &#160; FEG adds \(\green{q^2}\) term</p></div>
+<div class="paragraph"><p>\(
+\Im\sigma_\T^\tn{ns} =
+\green{\dfrac{ne^2}{\omega m}} \left(\green{1} + \frac{1}{5} \,
+\frac{\green{\vc{q^2}} v_\fermi^2}{\omega^2} + \frac{3}{35} \, \frac{q^4
+v_\fermi^4}{\omega^4} +
+\small \mathcal{O}\left(q^6\right)\right)
+\)</p></div></div></div>
+<div class="openblock fragment"><div class="content"><div class="paragraph"><div class="title">&#8594; &#160; spin-correction adds order \(\green{q^4}\) contributions</div><p>\(
+\Im \sigma^\tn{spin}_\T = \green{\dfrac{ne^2}{\omega m}} \left(
+\frac{1}{4} \, \frac{v_\fermi^2}{k_\fermi^2} \, \frac{\green{\vc{q^4}}}{\omega^2}
++ \small \mathcal{O}(q^6) \right)
+\)</p></div></div></div>
+<div class="quoteblock wide"><blockquote><div class="paragraph"><p>&#8658; <span class="purple">no significant impact</span> on dispersion relation!</p></div></blockquote></div></div></div>
+<div class="exampleblock column is-half left fragment"><div class="content"><div class="paragraph"><p><span class="bboxed">Magnetic Properties:</span></p></div>
+<div class="openblock fragment"><div class="content"><div class="paragraph"><p>&#8594; &#160; (dia + orb) parts lead to <span class="orange">Landau Diamagnetism</span>
+<p style="margin-bottom:0.25em; display:flex"></p>
+\(
+\chi_\tn{m}^\tn{ns} \overset{\omega\to 0}{=}
+\green{ \mu_0 \mu_\tns{B}^2 \h g(E_\fermi) } \Big( \green{-\frac{1}{3} } +
+\frac{1}{60}\h\frac{q^2}{k_\fermi^2} + \small \mathcal{O}(q^4) \Big)
+\)</p></div></div></div>
+<div class="openblock fragment"><div class="content"><div class="paragraph"><div class="title">&#8594; &#160; spin-correction adds <span class="orange">Pauli Paramagnetism</span></div><p>\(
+\chi_\tn{m}^\tn{spin} \overset{\omega\to 0}{=}
+\green{\mu_0 \mu_\tns{B}^2 \h g(E_\fermi) }
+\left( \green{1} - \frac{1}{12}\h\frac{q^2}{k_\fermi^2} + \small
+\mathcal{O}(q^4)\right) \)</p></div></div></div>
+<div class="quoteblock wide"><blockquote><div class="paragraph"><p>&#8658; &#160; reproduces <span class="purple">Landau and Pauli mag.</span> via <span class="orange">URR</span></p></div></blockquote></div></div></div></div></section></section>
+<section><section id="_lindhard_integral_theorem_1" class="stemscale85"><h2>Lindhard Integral Theorem (1)</h2><div class="slide-content"><div class="quoteblock"><blockquote><div class="paragraph"><p><span class="green">Central Result</span>: <span class="orange">Current response</span> of FEG can be reduced to
+<span class="purple">3 dimensionless parameter integrals</span>. Complete response is then
+determined by these integrals, Lindhard density response and constant charge
+density.</p></div></blockquote></div><div class="stemblock fragment" data-fragment-index="1"><div class="content">\[\orange{(\tsr\chi)_{ij}}(\vcq,\omega) = -\left( \frac{e^2 \green{n}}{m} +
+\frac{\hbar^2
+\abs{\vcq}^2}{4m^2} \, \green{\rchi}(\vcq,\omega) \right) \delta_{ij} +
+\green{\alpha_{ij}}(\vcq,\omega) + q_i \h \green{\beta_j}(\vcq,\omega) +
+\green{\beta_i}(\vcq,\omega) \h q_j\]</div></div><table class="tableblock frame-ends grid-none fragment" data-fragment-index="2"><colgroup><col><col></colgroup><tbody><tr><td class="tableblock halign-left valign-top"><div><div class="stemblock"><div class="content">\[\left.
+\begin{align}
+\green{\alpha_{ij}}(\vcq,\omega) &amp;= -\frac{\hbar^2}{4m^2} \left( 2e^2
+\vint{\vck} \green{4 k_i k_j} \, \frac{f_\vck - f_{\vck+\vcq}}{
+\hbar \omega\plus + \eps_\vck - \eps_{\vck + \vcq}} \right)  \\[1ex]
+%
+\label{eq:beta_i}
+\green{\beta_i}(\vcq,\omega) &amp;= -\frac{\hbar^2}{4m^2} \left( 2e^2
+\vint{\vck} \green{2 k_i} \, \frac{f_\vck - f_{\vck+\vcq}}{
+\hbar \omega\plus + \eps_\vck - \eps_{\vck + \vcq}} \right)
+\end{align} \quad \right\}\]</div></div></div></td><td class="tableblock halign-left valign-middle"><div><div class="paragraph fragment" data-fragment-index="4"><p>&#8658; can be reduced from <span class="purple">12 to 3</span></p></div>
+<div class="paragraph fragment" data-fragment-index="5"><p>&#8658; can be solved <span class="purple">analytically</span> for<br>
+&#160;&#160;&#160;&#160; <span class="orange">Zero Temperature Case</span></p></div></div></td></tr></table><div class="stemblock fragment" data-fragment-index="3"><div class="content">\[\green{\rchi}(\vcq,\omega) = 2e^2 \vint{\vck} \frac{f_\vck - f_{\vck + \vcq}}{
+\hbar \omega\plus + \eps_\vck - \eps_{\vck + \vcq}} \,,
+%
+\qquad \green{n} = 2 \vint{\vck} f_\vck =  \int \de\omega \, g(\omega) f(\omega)\]</div></div></div></section><section id="_lindhard_integral_theorem_2"><h2>Lindhard Integral Theorem (2)</h2><div class="slide-content"><table class="tableblock frame-none grid-none stretch"><colgroup><col><col></colgroup><tbody><tr><td class="tableblock halign-left valign-top"><div><div class="paragraph"><p>For zero temperature case:</p></div>
+<div class="stemblock scale90 fragment" data-fragment-index="1"><div class="content">\[\begin{align}
+	\green{\alpha_{xx}} &amp;=
+	{\small E_\fermi \h g(E_\fermi)} \,
+	\tfrac{e^2}{m} \, \tfrac{\red{(-2)}}{4\hat q} \,
+	\big(\purple{I_{\alpha{xx}}(\nu_-)} - \purple{I_{\alpha{xx}}(\nu_+)}\big)
+	\\[1ex]
+	\green{\alpha_{zz}} &amp;=
+	{\small E_\fermi \h g(E_\fermi)} \,
+	\tfrac{e^2}{m} \, \tfrac{\red{(-4)}}{4\hat q} \,
+	\big(\purple{I_{\alpha{zz}}(\nu_-)} - \purple{I_{\alpha{zz}}(\nu_+)}\big)
+	\\[1ex]
+	\green{\beta_z} &amp;=
+	\tfrac{E_\fermi \h g(E_\fermi)}{k_\fermi} \,
+	\tfrac{e^2}{m} \, \tfrac{\red{(-2)}}{4\hat q} \,
+	\big(\purple{I_{\beta z}(\nu_-)} + \purple{I_{\beta z}(\nu_+)}\big)
+	\\[1ex]
+	\tfrac{\hbar^2}{4 m^2} \, \blue\rchi &amp;=
+	\tfrac{E_\fermi \h g(E_\fermi)}{k_\fermi^2} \,
+	\tfrac{e^2}{m} \, \tfrac{\red{(+1)}}{4\hat q} \,
+	\big(\blue{I_\chi(\nu_-)} - \blue{I_\chi(\nu_+)}\big)
+\end{align}\]</div></div></div></td><td class="tableblock halign-center valign-top"><div><div class="exampleblock fragment" data-fragment-index="2"><div class="content"><div class="paragraph"><p><span class="orange">Master Formula</span><br></p></div>
+<div class="openblock oboxed"><div class="content"><div class="stemblock"><div class="content">\[\hat\gamma(\hat q, \hat\omega) = \frac{\gamma_0}{4 \hat{q}} \,
+\big( \purple{I_\gamma(\nu_-)} + \purple{I_\gamma(-\nu_+)}\big)\]</div></div>
+<div class="stemblock"><div class="content">\[\begin{array}{c|c c c c}
+	\gamma   &amp; \blue\rchi &amp; \green{\alpha_{xx}} &amp; \green{\alpha_{zz}} &amp; \green{\beta_z} \\
+	\gamma_0 &amp; \red{+1}   &amp; \red{-2}          &amp; \red{-4}          &amp; \red{-2}
+\end{array}\]</div></div></div></div></div></div></div></td></tr></table>
+<div class="stemblock scale90 fragment" data-fragment-index="3"><div class="content">\[\begin{align}
+	\purple{I_{\alpha{xx}}(z)} &amp;\eqdef \int_0^1 \de x \, x^4 \int_0^\pi \de\theta \;
+	\frac{\sin^3\theta}{z - x\cos\theta}
+	= \frac{1}{3} \, z + \frac{1-z^2}{2} \, \blue{I_\chi(z)}
+	\\[1ex]
+	\purple{I_{\alpha{zz}}(z)} &amp;\eqdef \int_0^1 \de x \, x^4 \int_0^\pi \de\theta \;
+	\frac{\sin\theta \h \cos^2\theta}{z - x\cos\theta}
+	= -\frac{2}{3} \, z + z^2 \blue{I_\chi(z)}
+	\\[1ex]
+	\purple{I_{\beta z}(z)} &amp;\eqdef \int_0^1 \de x \, x^3\int_0^\pi \de\theta  \;
+	\frac{\sin\theta \h \cos\theta}{z - x\cos\theta}
+	= -\frac{2}{3} + z \h \blue{I_\chi(z)}
+
+	\phantom{------------------------------------------------}
+\end{align}\]</div></div>
+<div class="openblock fragment" data-fragment-index="1"><div class="content"><div class="paragraph"><p><span id="Ichi" class="scale80">\(
+\qquad \nu_\pm = \dfrac{\omega}{q\h v_\fermi} \pm \dfrac{q}{2k_\fermi} \\[2ex]
+\blue{I_\chi(z)} = z + \dfrac{1-z^2}{2} \, \Ln\left(\dfrac{z+1}{z-1}\right)
+\)</span></p></div></div></div>
+<div id="IchiQuote" class="quoteblock fragment" data-fragment-index="5"><blockquote><div class="paragraph"><p>All <span class="purple">characteristic integrals</span> can be expressed<br>
+in terms of the <span class="blue">Lindhard integral</span>!</p></div></blockquote></div></div></section></section>
+<section id="_summary_conclusion" class="columns"><h2>Summary &amp; Conclusion</h2><div class="slide-content"><div class="quoteblock column is-full"><blockquote><div class="paragraph"><p>Based on <span class="orange">exclusively microscopic field theory</span> it is shown that via
+<span class="orange">URR</span><br>
+that all relevant <span class="purple">linear optical and magnetic</span> materials properties<br>
+of the <span class="orange">FEG</span> follow from the <span class="purple">full current response</span> tensor.
+<span class="green">(Central Claim)</span></p></div></blockquote></div>
+<div class="exampleblock column is-half left"><div class="content"><div class="ulist fragment"><div class="title"><span class="blue">In particular:</span></div><ul><li><p>By <span class="orange">Ampères Law</span>, every magnetization is generated by a microscopic
+current</p></li><li><p>As a matter of principle, this also includes<br>
+<span class="purple">spin-induced magnetism</span></p></li></ul></div>
+<div class="ulist fragment"><div class="title"><span class="blue">Implication</span></div><ul><li><p>All contributions to the current should be<br>
+treated equally in <span class="orange">Linear Response Theory</span></p></li></ul></div></div></div>
+<div class="openblock column is-half left"><div class="content"><div class="ulist fragment"><div class="title"><span class="blue">Derived in this Thesis</span></div><ul><li><p>Full current operator based on the <span class="orange">Pauli Equation</span></p></li><li><p>General form of &#160; \(\tsr\chi\) &#160; for the <span class="orange">FEG</span></p></li><li><p>Analytic expressions in the
+<span class="orange">Zero Temperatur Case</span></p></li><li><p>Postulation &amp; proof of <span class="green">Lindhard Integral Theorem</span></p></li></ul></div>
+<div class="ulist fragment"><div class="title"><span class="blue">Further Work</span></div><ul><li><p>Algorithm for &#160; <span class="orange">\(n_\tn{e}\)</span> &#160; and &#160;
+<span class="orange">\(n_\tn{o}\)</span> from given \(\sigma\)</p></li><li><p>2<sup>nd</sup>-order non-linear analogon of &#160; \(\chimn\)</p></li></ul></div></div></div></div></section>
+<section id="_thanks_for_the_attention" class="columns" data-state="no-title-footer"><h2>Thanks for the attention!</h2><div class="slide-content"><div class="exampleblock column"><div class="content"><div class="paragraph"><p>&#8201;&#8212;&#8201;Acknowledgements&#8201;&#8212;&#8201;</p></div>
+<div class="openblock left-align"><div class="content"><div class="paragraph"><p><span class="orange">Prof. Jens Kortus</span><br>
+(supervisor)</p></div>
+<div class="paragraph"><p><span class="orange">Prof. Caterina Cocchi</span><br>
+(2<sup>nd</sup> referee)</p></div>
+<div class="paragraph"><p><span class="orange">Haushalt</span><br>
+(funding)</p></div>
+<div class="paragraph"><p><span class="orange">Institute for<br>
+Theoretical Physics</span><br>
+(hospitality)</p></div></div></div></div></div>
+<div class="openblock column"><div class="content"><div class="imageblock"><img src="pics/Miron.jpg" alt="Miron" height="600"></div>
+<div class="paragraph"><p><h2>Any Questions?</h2></p></div></div></div>
+<div class="exampleblock column"><div class="content"><div class="paragraph"><p>&#8201;&#8212;&#8201;Special Thanks&#8201;&#8212;&#8201;</p></div>
+<div class="openblock right-align"><div class="content"><div class="paragraph"><p><span class="orange">Dr. Ronald Starke</span><br>
+(person in charge)</p></div>
+<div class="paragraph"><p><span class="orange">Dr. Giulio Schober</span><br>
+(2<sup>nd</sup> person in charge)</p></div>
+<div class="paragraph"><p><span class="orange">My Wife</span><br>
+(not in charge but calls<br>
+the tune anyways)</p></div>
+<div class="paragraph"><p><span class="orange">Friends &amp; Family</span><br>
+(always helpful&#8230;&#8203; &#160; &#160; &#160;<br>
+ &#160; &#160; &#160; &#8230;&#8203;most of the time)</p></div></div></div></div></div></div></section></div></div><script src="reveal.js/js/reveal.js"></script><script>Array.prototype.slice.call(document.querySelectorAll('.slides section')).forEach(function(slide) {
   if (slide.getAttribute('data-background-color')) return;
   // user needs to explicitly say he wants CSS color to override otherwise we might break custom css or theme (#226)
   if (!(slide.classList.contains('canvas') || slide.classList.contains('background'))) return;
@@ -998,9 +1154,9 @@ Reveal.initialize({
 // client
 { src: 'reveal.js/plugin/multiplex/client.js', async: true },
 // master
-// { src: 'reveal.js/plugin/multiplex/master.js', async: true }
+// { src: 'reveal.js/plugin/multiplex/master.js', async: true },
 // and if you want speaker notes
-// { src: 'reveal.js/plugin/notes-server/client.js', async: true }
+// { src: 'reveal.js/plugin/notes-server/client.js', async: true },
 
 // for newer revealjs use instead
 // { src: 'https://reveal-multiplex.glitch.me/socket.io/socket.io.js', async: true },
@@ -1009,7 +1165,7 @@ Reveal.initialize({
 // master
 // { src: 'https://reveal-multiplex.glitch.me/master.js', async: true },
 // and if you want speaker notes
-// { src: 'https://unpkg.com/reveal-notes-server/client.js', async: true }
+// { src: 'https://unpkg.com/reveal-notes-server/client.js', async: true },
 
 
 
@@ -1092,7 +1248,9 @@ keyboard: {
     89: function() { RevealChalkboard.colorPrev() },	// cycle colors backward when 'y' is pressed
 
 	// pause/resume/reset elapsed time bar with SPACE
-    32: function() { ElapsedTimeBar.isPaused ? ElapsedTimeBar.resume() : ElapsedTimeBar.pause(); },
+    // 32: function() { ElapsedTimeBar.isPaused ? ElapsedTimeBar.resume() : ElapsedTimeBar.pause(); },
+    // use ENTER
+    13: function() { ElapsedTimeBar.isPaused ? ElapsedTimeBar.resume() : ElapsedTimeBar.pause(); },
     // reset timer when 'r' is pressed
     82: function() { ElapsedTimeBar.reset(); },
 },
@@ -1150,7 +1308,7 @@ skipFragmentsHideShortcut: 'C',
 
 // elapsed time-bar config
 // - (required) your allotted time for presentation
-allottedTime: 0.1 * 60 * 1000, // 3 minutes
+allottedTime: 30 * 60 * 1000, // 3 minutes
 // - (optional) height of page/time progress bar
 progressBarHeight: 3,
 // - (optional) bar color

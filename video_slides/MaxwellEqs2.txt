@@ -1,6 +1,14 @@
-<p class="fragment" type='video' time_start=0 time_end=1.25></p>
-<p class="fragment" type='video' time_start=1.25 time_end=3.749999999999996></p>
-<p class="fragment" type='video' time_start=3.749999999999996 time_end=5.249999999999993></p>
-<p class="fragment" type='video' time_start=5.249999999999993 time_end=9.749999999999986></p>
-<p class="fragment" type='video' time_start=9.749999999999986 time_end=16.24999999999997></p>
-<p class="fragment" type='video' time_start=16.24999999999997 time_end=19.50000000000007></p>
+<p class="fragment" style="display: none;" type='video' time_start=0 time_end=3.249999999999999></p>
+<p class="fragment" style="display: none;" type='video' time_start=3.249999999999999 time_end=4.749999999999996></p>
+<p class="fragment" style="display: none;" type='video' time_start=4.749999999999996 time_end=6.249999999999992></p>
+<p class="fragment" style="display: none;" type='video' time_start=6.249999999999992 time_end=9.249999999999986></p>
+<p class="fragment" style="display: none;" type='video' time_start=9.249999999999986 time_end=10.749999999999982></p>
+<p class="fragment" style="display: none;" type='video' time_start=10.749999999999982 time_end=12.249999999999979></p>
+<p class="fragment" style="display: none;" type='video' time_start=12.249999999999979 time_end=13.749999999999975></p>
+<p class="fragment" style="display: none;" type='video' time_start=13.749999999999975 time_end=15.249999999999972></p>
+<p class="fragment" style="display: none;" type='video' time_start=15.249999999999972 time_end=17.750000000000043></p>
+<p class="fragment" style="display: none;" type='video' time_start=17.750000000000043 time_end=19.250000000000092></p>
+<p class="fragment" style="display: none;" type='video' time_start=19.250000000000092 time_end=23.75000000000029></p>
+<p class="fragment" style="display: none;" type='video' time_start=23.75000000000029 time_end=25.25000000000034></p>
+<p class="fragment" style="display: none;" type='video' time_start=25.25000000000034 time_end=26.75000000000039></p>
+<p class="fragment" style="display: none;" type='video' time_start=26.75000000000039 time_end=28.00000000000044></p>
