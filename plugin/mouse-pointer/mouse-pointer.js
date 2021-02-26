@@ -65,7 +65,7 @@
 
 	function setKeyboards(params) {
 		document.addEventListener('keydown', function (event) {
-			if (event.keyCode === 20) {
+			if (event.keyCode === 81) {
 				event.preventDefault()
 				toggleBind = !toggleBind
 				toogleMousePointer()
